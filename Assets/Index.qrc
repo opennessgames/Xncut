@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/XncutMvp.png</file>
+    </qresource>
+</RCC>
