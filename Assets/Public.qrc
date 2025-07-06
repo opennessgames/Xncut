@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Public/XSearch.png</file>
+        <file>Images/Public/XQRCode.svg</file>
+        <file>Images/Public/XPubgXncut.png</file>
+        <file>Images/Public/XOrderDescend.png</file>
+        <file>Images/Public/XOrderAscend.png</file>
+        <file>Images/Public/XImport.png</file>
+        <file>Images/Public/XEmpty.png</file>
+        <file>Images/Public/XDelete.png</file>
+        <file>Images/Public/XDefaultCover.png</file>
+        <file>Images/Public/XClearSearch.png</file>
+        <file>Images/Public/Time.png</file>
+        <file>Images/Public/Sun.png</file>
+        <file>Images/Public/MilkDragon.png</file>
+        <file>Images/Public/Meer.png</file>
+        <file>Images/Public/Linux.png</file>
+        <file>Images/Public/Lightning.png</file>
+        <file>Images/Public/Compile.png</file>
+        <file>Images/Public/BuiltWithQt.png</file>
+    </qresource>
+</RCC>
