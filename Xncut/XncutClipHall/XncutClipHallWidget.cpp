@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 11:59:00
+ * @LastEditTime: 2025-07-06 18:23:09
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -177,21 +177,21 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
 XncutClipHallWidget::~XncutClipHallWidget()
 {
     /* 释放 */
-    // delete M_RecentProjectCardModel;
+    delete M_RecentProjectCardModel;
     delete M_RecentProjectCardDelegate;
-    // foreach (QAction *Action, M_RecentProjectListViewContextMenu->actions())
-    // {
-    //     delete Action;
-    //     Action = NULL;
-    // }
-    // delete M_RecentProjectListViewContextMenu;
-    // delete M_RecentProjectCardSortFilterProxyModel;
+    foreach (QAction *Action, M_RecentProjectListViewContextMenu->actions())
+    {
+        delete Action;
+        Action = NULL;
+    }
+    delete M_RecentProjectListViewContextMenu;
+    delete M_RecentProjectCardSortFilterProxyModel;
 
     /* 防止野指针 */
-    // M_RecentProjectCardModel = NULL;
+    M_RecentProjectCardModel = NULL;
     M_RecentProjectCardDelegate = NULL;
-    // M_RecentProjectListViewContextMenu = NULL;
-    // M_RecentProjectCardSortFilterProxyModel = NULL;
+    M_RecentProjectListViewContextMenu = NULL;
+    M_RecentProjectCardSortFilterProxyModel = NULL;
 }
 
 void XncutClipHallWidget::InitClipHallLeft()

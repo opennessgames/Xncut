@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-02 13:39:04
+ * @LastEditTime: 2025-07-06 18:29:57
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -14,6 +14,7 @@
 #include <QPropertyAnimation>
 #include <QStackedWidget>
 #include "XncutClipHall/XncutClipHallWidget.h"
+#include "XncutProjectManager/XncutProjectManagerWidget.h"
 
 class Xncut : public QMainWindow
 {
@@ -39,8 +40,8 @@ private:
     /********************************************************************************************************/
 
     /* 核心部件 */
-    /* 大厅 */
-    XncutClipHallWidget *M_ClipHallWidget = NULL;
+    XncutClipHallWidget *M_ClipHallWidget = NULL;             /* 大厅 */
+    XncutProjectManagerWidget *M_ProjectManagerWidget = NULL; /* 工程管理器 */
     /********************************************************************************************************/
 };
 

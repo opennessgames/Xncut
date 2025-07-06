@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:08
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-05 22:50:26
+ * @LastEditTime: 2025-07-06 18:47:35
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -16,14 +16,15 @@ Xncut::Xncut(QWidget *Parent)
     M_CentralStackedWidget = new QStackedWidget();
 
     /* 核心部件 */
-    /* 大厅 */
-    M_ClipHallWidget = new XncutClipHallWidget();
+    M_ClipHallWidget = new XncutClipHallWidget();             /* 大厅 */
+    M_ProjectManagerWidget = new XncutProjectManagerWidget(); /* 工程管理器 */
     /********************************************************************************************************/
 
     /* 设置属性 */
     M_CentralStackedWidget->setContentsMargins(20, 20, 20, 20);
     M_CentralStackedWidget->addWidget(M_ClipHallWidget);
-    M_CentralStackedWidget->setCurrentWidget(M_ClipHallWidget);
+    M_CentralStackedWidget->addWidget(M_ProjectManagerWidget);
+    M_CentralStackedWidget->setCurrentWidget(M_ProjectManagerWidget);
     /********************************************************************************************************/
 
     /* 设置中心控件 */
