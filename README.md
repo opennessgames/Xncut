@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 17:45:08
+ * @LastEditTime: 2025-07-06 20:08:25
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -32,7 +32,7 @@
 > 熙柠剪辑经过了很多次深度调优, 致力于提供**更低的内存占用**、**更快的剪辑速度**和**更专业的剪辑方案**~</br>
 > 我们的目标是向企业级,系统级看齐; 做到和剪映,Pr一样的规模</br>
 > **C/C++**是很漂亮的语言, 人菜就是人菜, 人菜不要责怪工具</br>
-> 喜欢的伙计记得点个Star~
+> 喜欢的伙计记得点个Star~</br>
 ![大厅截图](Doc/Image/ClipHall/ClipHall0.png)
 
 # 项目类型
@@ -74,6 +74,7 @@
     - [FILE] ClipHall.qrc **大厅资源文件**
     - [FILE] Public.qrc **公共的资源文件**
   - [DIR] Src **假的目录,嘿嘿**
+    - [FILE] Main.c **嘿嘿**
   - [DIR] Xncut **真正的源代码目录**
     - [DIR] XncutClipHall **剪辑大厅**
       - [FILE] XncutClipHallWidget.h **主部件**
@@ -87,9 +88,18 @@
       - [FILE] XncutRunTimeContext.cpp
       - [FILE] XncutFunTool.h **常用的函数,类似于std::max这样的(保留类)**
       - [FILE] XncutFunTool.cpp
+    - [DIR] XncutProjectManager **工程管理器**
+      - [FILE] XncutProjectManagerWidget.h **工程管理部件**
+      - [FILE] XncutProjectManagerWidget.cpp
+      - [FILE] XncutProjectCreateWidget.h **工程创建(负责增)**
+      - [FILE] XncutProjectCreateWidget.cpp
+      - [FILE] XncutProjectModifyWidget.h **工程管理(负责删改查)**
+      - [FILE] XncutProjectModifyWidget.cpp
     - [DIR] XncutPublicWidget **公共的部件**
       - [FILE] XncutListView.h **列表视图**
       - [FILE] XncutListView.cpp
+      - [FILE] XncutSwitchButton.h **类安卓开关控件**
+      - [FILE] XncutSwitchButton.cpp
     - [DIR] XncutWelcome **欢迎**
       - [FILE] XncutWelcomeScreen.h **欢迎屏幕**
       - [FILE] XncutWelcomeScreen.cpp
