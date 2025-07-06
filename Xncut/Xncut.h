@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 21:58:42
+ * @LastEditTime: 2025-07-06 22:08:47
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -38,6 +38,11 @@ private slots:
     /********************************************************************************************************/
 
 protected:
+    /* 重载事件 */
+    /* 关闭事件 */
+    void closeEvent(QCloseEvent *Event);
+    /********************************************************************************************************/
+
 signals:
 
 private:

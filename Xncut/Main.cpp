@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:34:42
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-04 10:22:05
+ * @LastEditTime: 2025-07-06 22:12:12
  * @FilePath: /Xncut/Xncut/Main.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -13,6 +13,10 @@
 
 int main(int argc, char *argv[])
 {
+    /* 启动消息 */
+    qDebug() << "Starting PUGB:XNCUT...";
+    /********************************************************************************************************/
+
     /* 初始化 */
     QApplication OpenGameApplication(argc, argv);
     XncutRunTimeContext RunTimeContext(getenv("PUBG_XNCUT_WORKING_PATH")); /* 构造上下文 */

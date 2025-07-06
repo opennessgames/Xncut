@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:08
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:06:56
+ * @LastEditTime: 2025-07-06 22:12:45
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -42,18 +42,29 @@ Xncut::Xncut(QWidget *Parent)
 
 Xncut::~Xncut()
 {
+    qDebug() << "Exit PUGB:XNCUT...";
 }
 
 void Xncut::JmpHall()
 {
     M_CentralStackedWidget->setCurrentWidget(M_ClipHallWidget);
+    setWindowTitle("剪辑大厅");
 }
 
 void Xncut::JmpProjectManager()
 {
     M_CentralStackedWidget->setCurrentWidget(M_ProjectManagerWidget);
+    setWindowTitle("工程管理");
 }
 
 void Xncut::JmpEditor()
 {
+}
+
+void Xncut::closeEvent(QCloseEvent *Event)
+{
+    /* 窗口是否被修改 */
+    if (isWindowModified())
+    {
+    }
 }
