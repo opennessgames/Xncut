@@ -1,0 +1,80 @@
+[
+    {
+        "MenuName": "文件(F)",
+        "Action": [
+            {
+                "Icon": "://Images/Editor/TitleBar/MenuIcon/Save.png",
+                "Name": "保存",
+                "Slot": "onOpen"
+            },
+            {
+                "Icon": "://Images/Public/XImport.png",
+                "Name": "导入素材",
+                "Slot": "onOpenSlot"
+            }
+        ]
+    },
+    {
+        "MenuName": "项目(P)",
+        "Action": [
+            {
+                "Icon": "",
+                "Name": "项目参数设置(A)",
+                "Slot": "onOpen"
+            }
+        ]
+    },
+    {
+        "MenuName": "编辑(E)",
+        "Action": []
+    },
+    {
+        "MenuName": "剪辑(C)",
+        "Action": []
+    },
+    {
+        "MenuName": "序列(S)",
+        "Action": []
+    },
+    {
+        "MenuName": "标记(M)",
+        "Action": []
+    },
+    {
+        "MenuName": "图形(G)",
+        "Action": []
+    },
+    {
+        "MenuName": "窗口(C)",
+        "Action": []
+    },
+    {
+        "MenuName": "布局(L)",
+        "Action": [
+            {
+                "Icon": "",
+                "Name": "横屏创作布局(L)",
+                "Slot": "onOpen"
+            },
+            {
+                "Icon": "",
+                "Name": "竖屏创作布局(P)",
+                "Slot": "onOpen"
+            }
+        ]
+    },
+    {
+        "MenuName": "导出(E)",
+        "Action": [
+            {
+                "Icon": "",
+                "Name": "导出为媒体文件(M)",
+                "Slot": "onOpen"
+            }
+        ]
+    },
+    {
+        "MenuName": "帮助(H)",
+        "Action": []
+    }
+]
