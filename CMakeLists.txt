@@ -11,8 +11,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(Xncut VERSION 0.1 LANGUAGES CXX)
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC OFF) # 关闭掉UIC,因为我不使用QT设计师
+set(CMAKE_AUTOMOC ON) # 这个是必须要打开的,MOC
 set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 17)
