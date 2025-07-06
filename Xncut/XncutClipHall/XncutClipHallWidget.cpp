@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 18:23:09
+ * @LastEditTime: 2025-07-06 21:57:53
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -151,6 +151,9 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     /********************************************************************************************************/
 
     /* 连接信号槽 */
+    /* 大厅右侧 */
+    connect(M_ProjectBgButton, &QPushButton::clicked, this, &XncutClipHallWidget::ProjectBackgroundClicked);
+    connect(M_StartButton, &QPushButton::clicked, this, &XncutClipHallWidget::StartButtonClicked);
     /* 最近工程顶部栏 */
     connect(M_SearchLineEdit, &QLineEdit::textChanged, this, &XncutClipHallWidget::SearchLineEditTextChanged);
     connect(M_ClearSearchButton, &QPushButton::clicked, this, &XncutClipHallWidget::ClearSearchButtonClicked);
@@ -268,6 +271,16 @@ void XncutClipHallWidget::InitBottomMenuButton(QPushButton *Button, int ButtonIc
 
     Button->setIconSize(QSize(ButtonIconSize, ButtonIconSize));
     Button->setIcon(ButtonIcon);
+}
+
+void XncutClipHallWidget::ProjectBackgroundClicked()
+{
+    emit HasJmpProjectManagerRequest();
+}
+
+void XncutClipHallWidget::StartButtonClicked()
+{
+    emit HasJmpEditorRequest();
 }
 
 void XncutClipHallWidget::SearchLineEditTextChanged(const QString &CurrText)

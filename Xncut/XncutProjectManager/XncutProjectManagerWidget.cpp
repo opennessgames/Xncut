@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 18:25:55
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 19:20:37
+ * @LastEditTime: 2025-07-06 22:06:12
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectManagerWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -51,4 +51,14 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
 
     setLayout(M_MainLayout);
     /********************************************************************************************************/
+
+    /* 连接信号槽 */
+    /* 返回大厅按钮被点击 */
+    connect(M_ReturnClipHallButton, &QPushButton::clicked, this, &XncutProjectManagerWidget::ReturnClipHallButtonClicked);
+    /********************************************************************************************************/
+}
+
+void XncutProjectManagerWidget::ReturnClipHallButtonClicked()
+{
+    emit HasJmpClipHallRequest();
 }

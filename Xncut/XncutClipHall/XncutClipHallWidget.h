@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 16:21:29
+ * @LastEditTime: 2025-07-06 22:01:07
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -68,6 +68,14 @@ private:
     /********************************************************************************************************/
 
 private slots:
+    /* 大厅右侧 */
+    /* 工程背景被点击 */
+    void ProjectBackgroundClicked();
+
+    /* 开始按钮被点击 */
+    void StartButtonClicked();
+    /********************************************************************************************************/
+
     /* 最近工程顶部栏 */
     /* [最近工程顶部栏] 搜索行编辑框文本发生改变 */
     void SearchLineEditTextChanged(const QString &CurrText);
@@ -105,6 +113,12 @@ private slots:
 
 protected:
 signals:
+    /* 请求跳转到管理器 */
+    void HasJmpProjectManagerRequest();
+
+    /* 请求跳转到编辑器 */
+    void HasJmpEditorRequest();
+    /********************************************************************************************************/
 
 private:
     /* 主布局 */

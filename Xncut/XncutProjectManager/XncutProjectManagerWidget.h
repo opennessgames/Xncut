@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 18:25:55
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 19:20:25
+ * @LastEditTime: 2025-07-06 22:04:11
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectManagerWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -26,9 +26,14 @@ public:
 
 private:
 private slots:
+    void ReturnClipHallButtonClicked();
+    /********************************************************************************************************/
 
 protected:
 signals:
+    /* 请求跳转到剪辑大厅 */
+    void HasJmpClipHallRequest();
+    /********************************************************************************************************/
 
 private:
     /* 主布局 */
@@ -48,6 +53,13 @@ private:
     XncutProjectModifyWidget *M_ProjectModifyWidget = NULL; /* 工程管理 */
     XncutProjectCreateWidget *M_ProjectCreateWidget = NULL; /* 工程创建 */
     /********************************************************************************************************/
+public:
+    XncutProjectManagerWidget(const XncutProjectManagerWidget &) = default;
+    XncutProjectManagerWidget(XncutProjectManagerWidget &&) = default;
+    XncutProjectManagerWidget &
+    operator=(const XncutProjectManagerWidget &) = default;
+    XncutProjectManagerWidget &
+    operator=(XncutProjectManagerWidget &&) = default;
 };
 
 #endif // XNCUT_PROJECT_MANAGER_WIDGET_H

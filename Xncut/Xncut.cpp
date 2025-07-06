@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:08
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 18:47:35
+ * @LastEditTime: 2025-07-06 22:06:56
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -21,17 +21,39 @@ Xncut::Xncut(QWidget *Parent)
     /********************************************************************************************************/
 
     /* 设置属性 */
-    M_CentralStackedWidget->setContentsMargins(20, 20, 20, 20);
+    M_CentralStackedWidget->setContentsMargins(10, 10, 10, 10);
     M_CentralStackedWidget->addWidget(M_ClipHallWidget);
     M_CentralStackedWidget->addWidget(M_ProjectManagerWidget);
-    M_CentralStackedWidget->setCurrentWidget(M_ProjectManagerWidget);
+    M_CentralStackedWidget->setCurrentWidget(M_ClipHallWidget);
     /********************************************************************************************************/
 
     /* 设置中心控件 */
     setCentralWidget(M_CentralStackedWidget);
     /********************************************************************************************************/
+
+    /* 连接信号槽 */
+    /* 剪辑大厅 */
+    connect(M_ClipHallWidget, &XncutClipHallWidget::HasJmpProjectManagerRequest, this, &Xncut::JmpProjectManager);
+    connect(M_ClipHallWidget, &XncutClipHallWidget::HasJmpEditorRequest, this, &Xncut::JmpEditor);
+    /* 工程管理器 */
+    connect(M_ProjectManagerWidget, &XncutProjectManagerWidget::HasJmpClipHallRequest, this, &Xncut::JmpHall);
+    /********************************************************************************************************/
 }
 
 Xncut::~Xncut()
+{
+}
+
+void Xncut::JmpHall()
+{
+    M_CentralStackedWidget->setCurrentWidget(M_ClipHallWidget);
+}
+
+void Xncut::JmpProjectManager()
+{
+    M_CentralStackedWidget->setCurrentWidget(M_ProjectManagerWidget);
+}
+
+void Xncut::JmpEditor()
 {
 }

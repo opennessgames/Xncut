@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 18:29:57
+ * @LastEditTime: 2025-07-06 21:58:42
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -26,6 +26,16 @@ public:
 
 private:
 private slots:
+    /* 跳转界面 */
+    /* 跳转到大厅 */
+    void JmpHall();
+
+    /* 跳转到工程管理 */
+    void JmpProjectManager();
+
+    /* 跳转到编辑器 */
+    void JmpEditor();
+    /********************************************************************************************************/
 
 protected:
 signals:
