@@ -2,13 +2,13 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 20:31:34
+ * @LastEditTime: 2025-07-06 21:11:27
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑: QT基岩版**
-> 熙柠剪辑以**AGPL**协议开源
+> 熙柠剪辑以**GPL**协议开源
 # 禁止商用! 
 # 禁止商用! 
 # 禁止商用! 
