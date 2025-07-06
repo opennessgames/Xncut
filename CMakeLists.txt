@@ -47,6 +47,14 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Xncut/XncutWelcome/XncutWelcomeScreen.cpp
         Xncut/XncutCore/XncutFunTool.h # 常用的函数
         Xncut/XncutCore/XncutFunTool.cpp
+        Xncut/XncutProjectManager/XncutProjectManagerWidget.h # 工程管理部件
+        Xncut/XncutProjectManager/XncutProjectManagerWidget.cpp
+        Xncut/XncutProjectManager/XncutProjectCreateWidget.h # 工程创建(负责增)
+        Xncut/XncutProjectManager/XncutProjectCreateWidget.cpp
+        Xncut/XncutProjectManager/XncutProjectModifyWidget.h # 工程管理(负责删改查)
+        Xncut/XncutProjectManager/XncutProjectModifyWidget.cpp
+        Xncut/XncutPublicWidget/XncutSwitchButton.h # 类安卓开关控件
+        Xncut/XncutPublicWidget/XncutSwitchButton.cpp
     )
     # Define target properties for Android with Qt 6 as:
     #    set_property(TARGET Xncut APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
