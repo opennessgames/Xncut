@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 16:54:08
+ * @LastEditTime: 2025-07-06 17:10:49
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -32,6 +32,7 @@
 > 熙柠剪辑经过了很多次优化与调优, 致力于提供**更低的内存占用**、**更快的剪辑速度**和**更专业的剪辑方案**~</br>
 > 我们的目标是向企业级,系统级看齐; 做到和剪映,Pr一样的规模</br>
 > **C/C++**是很漂亮的语言, 人菜就是人菜, 人菜不要责怪工具
+![大厅截图](Doc/Image/ClipHall/ClipHall0.png)
 
 # 各种版本: 
 - WEB版最早创建于: 2022年4月
