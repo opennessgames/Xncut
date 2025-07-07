@@ -1,5 +1,9 @@
 {
-    "XProjectName": [
-        ""
+    "XCurrentProject": "当前选择的工程",
+    "XRecentProjectList": [
+        {
+            "XName": "工程名称",
+            "XDescription": "工程描述"
+        }
     ]
 }
