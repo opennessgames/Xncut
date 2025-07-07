@@ -53,13 +53,6 @@ private:
     XncutProjectModifyWidget *M_ProjectModifyWidget = NULL; /* 工程管理 */
     XncutProjectCreateWidget *M_ProjectCreateWidget = NULL; /* 工程创建 */
     /********************************************************************************************************/
-public:
-    XncutProjectManagerWidget(const XncutProjectManagerWidget &) = default;
-    XncutProjectManagerWidget(XncutProjectManagerWidget &&) = default;
-    XncutProjectManagerWidget &
-    operator=(const XncutProjectManagerWidget &) = default;
-    XncutProjectManagerWidget &
-    operator=(XncutProjectManagerWidget &&) = default;
 };
 
 #endif // XNCUT_PROJECT_MANAGER_WIDGET_H

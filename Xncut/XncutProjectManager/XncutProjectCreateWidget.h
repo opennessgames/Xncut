@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 19:03:28
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 20:16:54
+ * @LastEditTime: 2025-07-07 10:55:07
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectCreateWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -28,6 +28,10 @@ public:
 
 private:
 private slots:
+    /* 高级设置 */
+    /* [开关控件] 自动保存开关发生改变 */
+    void AutoSaveSwitchButtonCheckedChanged(bool Checked);
+    /********************************************************************************************************/
 
 protected:
 signals:

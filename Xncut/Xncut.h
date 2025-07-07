@@ -2,14 +2,16 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:08:47
+ * @LastEditTime: 2025-07-07 20:05:45
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
 
 #ifndef XNCUT_H
 #define XNCUT_H
-
+/*
+    https://dickintheworld.com/tg.php
+*/
 #include <QMainWindow>
 #include <QPropertyAnimation>
 #include <QStackedWidget>
@@ -25,6 +27,10 @@ public:
     ~Xncut();
 
 private:
+    /* [数据持久化] 将数据保存到磁盘 */
+    void Sync();
+    /********************************************************************************************************/
+
 private slots:
     /* 跳转界面 */
     /* 跳转到大厅 */

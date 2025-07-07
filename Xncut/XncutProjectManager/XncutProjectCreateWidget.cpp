@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 19:03:38
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 20:18:55
+ * @LastEditTime: 2025-07-07 10:55:12
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectCreateWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -157,4 +157,13 @@ XncutProjectCreateWidget::XncutProjectCreateWidget(QWidget *Parent)
 
     setLayout(M_MainLayout);
     /********************************************************************************************************/
+
+    /* 连接信号槽 */
+    connect(M_AutoSaveSwitchButton, &XncutSwitchButton::checkedChanged, this, &XncutProjectCreateWidget::AutoSaveSwitchButtonCheckedChanged);
+    /********************************************************************************************************/
+}
+
+void XncutProjectCreateWidget::AutoSaveSwitchButtonCheckedChanged(bool Checked)
+{
+    M_IntervalLineEdit->setEnabled(Checked);
 }

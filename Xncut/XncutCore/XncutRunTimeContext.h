@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-04 10:01:23
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 16:19:26
+ * @LastEditTime: 2025-07-07 20:11:53
  * @FilePath: /Xncut/Xncut/XncutCore/XncutRunTimeContext.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -33,9 +33,20 @@ public:
 
     /* 获取工程目录 */
     static const char *GetProjectPath();
+
+    /*
+     * 获取熙柠剪辑的状态文件路径
+     * 返回的路径将会和工作区路径有关
+     * 例如工作区路径是`/home/yzx/.config/xncut`,那么此函数将返回`/home/yzx/.config/xncut/Xncut.json`
+     */
+    static const char *GetXncutPath();
     /********************************************************************************************************/
 
 private:
+    /* [封装功能] 路径拼接 */
+    char *ConcatPath(const char *Base, const char *Relative);
+    /********************************************************************************************************/
+
 private slots:
 
 protected:
@@ -45,6 +56,7 @@ private:
     /* 路径 */
     static const char *M_WorkPath; /* 工作区路径 */
     static char *M_ProjectPath;    /* 工程路径 */
+    static char *M_XncutPath;      /* Xncut.json */
     /********************************************************************************************************/
 };
 

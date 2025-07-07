@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 21:57:53
+ * @LastEditTime: 2025-07-07 19:31:03
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -148,6 +148,7 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     /********************************************************************************************************/
 
     setLayout(M_MainLayout);
+    setProperty("CurrentProject", "");
     /********************************************************************************************************/
 
     /* 连接信号槽 */
@@ -169,11 +170,10 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
 
     for (int var = 0; var < 10; var++)
     {
-        QStandardItem *Card = new QStandardItem();
-        Card->setIcon(QIcon(QPixmap(":/Images/Public/XDefaultCover.png").scaled(120, 60, Qt::KeepAspectRatio)));
-        Card->setText(QString("工程 %1").arg(var));
-        Card->setData("这是工程的描述", XncutRecentProjectCardDelegate::PRO_CARD_DATA_DESCRIPTION);
-        M_RecentProjectCardModel->insertRow(var, QList<QStandardItem *>() << Card);
+        InsertRecentProjectCard(var,
+                                QPixmap(":/Images/Public/XDefaultCover.png").scaled(120, 60, Qt::KeepAspectRatio),
+                                QString("工程 %1").arg(var),
+                                "这是工程的描述");
     }
 }
 
@@ -195,6 +195,34 @@ XncutClipHallWidget::~XncutClipHallWidget()
     M_RecentProjectCardDelegate = NULL;
     M_RecentProjectListViewContextMenu = NULL;
     M_RecentProjectCardSortFilterProxyModel = NULL;
+}
+
+QString XncutClipHallWidget::GetCurrentProject()
+{
+    return qvariant_cast<QString>(property("CurrentProject"));
+}
+
+void XncutClipHallWidget::InsertRecentProjectCard(int Index, QPixmap Cover, QString Name, QString Description)
+{
+    /* Item */
+    QStandardItem *Card = new QStandardItem();
+
+    /* Set arg */
+    Card->setIcon(QIcon(Cover));
+    Card->setText(Name);
+    Card->setData(Description, XncutRecentProjectCardDelegate::PRO_CARD_DATA_DESCRIPTION);
+
+    /* Insert */
+    M_RecentProjectCardModel->insertRow(Index, QList<QStandardItem *>() << Card);
+}
+
+void XncutClipHallWidget::RrmoveRecentProjectCard(int Index)
+{
+}
+
+QStandardItemModel *XncutClipHallWidget::GetRecentProjectCardModel()
+{
+    return M_RecentProjectCardModel;
 }
 
 void XncutClipHallWidget::InitClipHallLeft()
@@ -330,7 +358,9 @@ void XncutClipHallWidget::RecentProjectListViewCustomContextMenuRequested(const 
 
 void XncutClipHallWidget::RecentProjectListViewDoubleClicked(const QModelIndex &Index)
 {
-    M_ProjectTitleLabel->setText(QString("选择的工程: %1").arg(qvariant_cast<QString>(Index.data(Qt::DisplayRole))));
+    QString CurrentProject = qvariant_cast<QString>(Index.data(Qt::DisplayRole));
+    M_ProjectTitleLabel->setText(QString("选择的工程: %1").arg(CurrentProject));
+    setProperty("CurrentProject", CurrentProject);
 }
 
 void XncutClipHallWidget::RecentProjectCardModelRowsInserted()
@@ -348,7 +378,11 @@ void XncutClipHallWidget::RecentProjectCardModelRowsRemoved()
 void XncutClipHallWidget::RecentProjectListViewMenuSelectedActionTriggered()
 {
     QModelIndex CurrentModelIndex = M_RecentProjectCardSelectionModel->currentIndex();
-    M_ProjectTitleLabel->setText(QString("选择的工程: %1").arg(qvariant_cast<QString>(CurrentModelIndex.data(Qt::DisplayRole))));
+    QString CurrentProject = qvariant_cast<QString>(CurrentModelIndex.data(Qt::DisplayRole));
+
+    /* 设置属性 */
+    M_ProjectTitleLabel->setText(QString("选择的工程: %1").arg(CurrentProject));
+    setProperty("CurrentProject", CurrentProject);
 }
 
 void XncutClipHallWidget::RecentProjectListViewMenuDeleteActionTriggered()

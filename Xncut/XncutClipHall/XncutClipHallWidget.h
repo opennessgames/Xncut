@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:01:07
+ * @LastEditTime: 2025-07-07 19:30:43
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -51,6 +51,20 @@ public:
 
     /* 析构 */
     ~XncutClipHallWidget();
+
+    /* [工程选择器] 获取当前选中的工程名称 */
+    QString GetCurrentProject();
+    /********************************************************************************************************/
+
+    /* [最近工程列表] 插入最近工程卡片 */
+    void InsertRecentProjectCard(int Index, QPixmap Cover, QString Name, QString Description);
+
+    /* [最近工程列表] 移除最近工程卡片 */
+    void RrmoveRecentProjectCard(int Index);
+
+    /* [最近工程列表] 获取最近工程列表模型 */
+    QStandardItemModel *GetRecentProjectCardModel();
+    /********************************************************************************************************/
 
 private:
     /* 初始化大厅左侧 */

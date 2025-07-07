@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 19:05:20
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 20:00:11
+ * @LastEditTime: 2025-07-07 10:42:06
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectModifyWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -71,13 +71,14 @@ XncutProjectModifyWidget::XncutProjectModifyWidget(QWidget *Parent)
     /* 设置布局 */
     /* 危险操作水平布局 */
     M_DangerZoneLayout->setContentsMargins(0, 0, 0, 0);
-    M_DangerZoneLayout->setSpacing(3);
+    M_DangerZoneLayout->setSpacing(4);
     M_DangerZoneLayout->addWidget(M_DeleteProjectButton);
     M_DangerZoneLayout->addWidget(M_CloneProjectButton);
     M_DangerZoneLayout->addWidget(M_RenameProjectButton);
     M_DangerZoneLayout->addWidget(M_PackProjectButton);
 
     /* 主布局 */
+    M_MainLayout->setSpacing(2);
     M_MainLayout->addWidget(new QLabel("搜索工程: "), 0, 0);
     M_MainLayout->addWidget(M_SearchProjectLineEdit, 0, 1);
     M_MainLayout->addWidget(M_SearchProjectButton, 0, 2);
