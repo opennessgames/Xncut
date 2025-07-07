@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 15:35:52
+ * @LastEditTime: 2025-07-07 23:13:45
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -112,8 +112,15 @@
   - [FILE] CMakeLists.txt **Cmake的构建配置**
   - [FILE] README.md **就是这个**
 
+# 快速开始
+1. 你需要设置环境变量`PUBG_XNCUT_WORKING_PATH`
+   - 路径建议是`/home/username/.config`目录
+2. 推荐使用`Qt Creator`打开次项目
+3. 点击界面上的锤子以构建,或者点击三角号构建并运行
 
 # 更新日志
+- 2025-07-07 23:06:02 (功能) 完成大厅序列化与反序列化功能
+- 
 - 2025-06-28 18:22:28 (优化排版): 简化编辑器内部的关于信息对话框,去掉冗余信息
 - 2025-06-28 00:08:18 (优化视觉): 通过QTextOption类,绘制文本时,可以完美垂直居中
 - 2025-06-27 23:55:19 (优化视觉): TAB选中时文本加粗(PS: 这个设计借鉴了百度贴吧)
