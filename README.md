@@ -2,17 +2,15 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 21:40:23
+ * @LastEditTime: 2025-07-07 15:35:52
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑: QT基岩版**
-> 熙柠剪辑以**AGPL**协议开源
+> 熙柠剪辑以**AGPL**协议开源 </br>
 # 禁止商用! 
-# 禁止商用! 
-# 禁止商用! 
-# 禁止商用! 
+> 禁止商用! 禁止商用! 禁止商用! </br>
 # 商用者生孩子没皮燕!
 
 # 你可以:
@@ -95,6 +93,8 @@
       - [FILE] XncutProjectCreateWidget.cpp
       - [FILE] XncutProjectModifyWidget.h **工程管理(负责删改查)**
       - [FILE] XncutProjectModifyWidget.cpp
+      - [FILE] XncutProjectCardDelegate.h **工程卡片委托**
+      - [FILE] XncutProjectCardDelegate.cpp
     - [DIR] XncutPublicWidget **公共的部件**
       - [FILE] XncutListView.h **列表视图**
       - [FILE] XncutListView.cpp
