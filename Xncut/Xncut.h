@@ -2,16 +2,14 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 20:05:45
+ * @LastEditTime: 2025-07-07 21:11:48
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
 
 #ifndef XNCUT_H
 #define XNCUT_H
-/*
-    https://dickintheworld.com/tg.php
-*/
+
 #include <QMainWindow>
 #include <QPropertyAnimation>
 #include <QStackedWidget>
