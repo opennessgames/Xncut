@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:08
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 20:32:35
+ * @LastEditTime: 2025-07-07 20:36:32
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -70,7 +70,7 @@ void Xncut::Sync()
     }
 
     /* 添加到根对象 */
-    cJSON_AddStringToObject(Root, "CurrentProject", M_ClipHallWidget->GetCurrentProject().toUtf8().data());
+    cJSON_AddStringToObject(Root, "XCurrentProject", M_ClipHallWidget->GetCurrentProject().toUtf8().data());
     cJSON_AddItemToObject(Root, "XRecentProjectList", RecentProject);
 
     /* 写入到磁盘 */
