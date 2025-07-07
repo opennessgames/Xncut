@@ -28,7 +28,7 @@ XncutRunTimeContext::XncutRunTimeContext(const char *WorkPath)
     M_XncutPath = ConcatPath(M_WorkPath, "Xncut.json");
 
     /* 打印日志 */
-    qDebug() << "Working path" << M_WorkPath;
+    qDebug() << "Working path: " << M_WorkPath;
 }
 
 XncutRunTimeContext::~XncutRunTimeContext()

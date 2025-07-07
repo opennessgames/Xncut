@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:34:42
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:12:12
+ * @LastEditTime: 2025-07-07 23:10:30
  * @FilePath: /Xncut/Xncut/Main.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     /* 初始化主窗口 */
     Xncut XncutApplication;
     XncutApplication.setWindowTitle("剪辑大厅");
+    XncutApplication.SyncConfigToUI();
     XncutApplication.show();
     /********************************************************************************************************/
 

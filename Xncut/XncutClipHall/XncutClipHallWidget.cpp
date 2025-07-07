@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 19:31:03
+ * @LastEditTime: 2025-07-07 23:09:06
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -167,14 +167,6 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     connect(M_RecentProjectCardSortFilterProxyModel, &QSortFilterProxyModel::rowsInserted, this, &XncutClipHallWidget::RecentProjectCardModelRowsInserted);
     connect(M_RecentProjectCardSortFilterProxyModel, &QSortFilterProxyModel::rowsRemoved, this, &XncutClipHallWidget::RecentProjectCardModelRowsRemoved);
     /********************************************************************************************************/
-
-    for (int var = 0; var < 10; var++)
-    {
-        InsertRecentProjectCard(var,
-                                QPixmap(":/Images/Public/XDefaultCover.png").scaled(120, 60, Qt::KeepAspectRatio),
-                                QString("工程 %1").arg(var),
-                                "这是工程的描述");
-    }
 }
 
 XncutClipHallWidget::~XncutClipHallWidget()
@@ -195,6 +187,19 @@ XncutClipHallWidget::~XncutClipHallWidget()
     M_RecentProjectCardDelegate = NULL;
     M_RecentProjectListViewContextMenu = NULL;
     M_RecentProjectCardSortFilterProxyModel = NULL;
+}
+
+void XncutClipHallWidget::SetCurrentProjectName(QString ProjectName)
+{
+    if (ProjectName.isEmpty())
+    {
+        M_ProjectTitleLabel->setText("未选择工程,点击封面创建或选择一个吧^_^");
+        setProperty("CurrentProject", "");
+        return;
+    }
+
+    M_ProjectTitleLabel->setText(QString("选择的工程: %1").arg(ProjectName));
+    setProperty("CurrentProject", ProjectName);
 }
 
 QString XncutClipHallWidget::GetCurrentProject()
@@ -233,7 +238,7 @@ void XncutClipHallWidget::InitClipHallLeft()
 
     /* 工程选择器 */
     M_ProjectBgButton = new QPushButton(QIcon("://Images/Public/XDefaultCover.png"), ""); /* 工程背景图(进入工程管理器) */
-    M_ProjectTitleLabel = new QLabel("还没有工程,点击封面创建或选择一个吧 ^_^");          /* 工程标题 */
+    M_ProjectTitleLabel = new QLabel("未选择工程,点击封面创建或选择一个吧^_^");           /* 工程标题 */
     M_StartButton = new QPushButton(QIcon("://Images/ClipHall/XStartIcon.png"), "START"); /* 开始剪辑按钮 */
 
     /* 灵感 */

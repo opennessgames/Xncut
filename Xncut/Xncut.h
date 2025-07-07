@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 21:11:48
+ * @LastEditTime: 2025-07-07 22:19:24
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -24,8 +24,14 @@ public:
     Xncut(QWidget *Parent = NULL);
     ~Xncut();
 
+    /* [反序列化] 将配置文件`反序列化`成UI */
+    void SyncConfigToUI();
+
 private:
-    /* [数据持久化] 将数据保存到磁盘 */
+    /**
+     * [数据持久化] 将数据保存到磁盘,
+     *  即将UI的内容`序列化`成JSON
+     */
     void Sync();
     /********************************************************************************************************/
 

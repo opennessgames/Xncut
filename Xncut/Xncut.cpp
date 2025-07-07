@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:35:08
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 20:36:32
+ * @LastEditTime: 2025-07-07 23:06:02
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -50,6 +50,31 @@ Xncut::~Xncut()
     qDebug() << "Exit PUGB:XNCUT...";
 }
 
+void Xncut::SyncConfigToUI()
+{
+    /* 大厅 */
+    cJSON *ClipHallRootObject = NULL; /* 大厅的根cJSON */
+    cJSON *ProjectItem = NULL;
+    int Index = 0;
+
+    /* 尝试读取 */
+    XncutFunTool::ReadJsonFile(&ClipHallRootObject, XncutRunTimeContext::GetXncutPath());
+
+    /* 设置UI */
+    M_ClipHallWidget->SetCurrentProjectName(QString(cJSON_GetObjectItem(ClipHallRootObject, "XCurrentProject")->valuestring));
+    cJSON_ArrayForEach(ProjectItem, cJSON_GetObjectItem(ClipHallRootObject, "XRecentProjectList"))
+    {
+        /* 插入到大厅的最近列表视图 */
+        M_ClipHallWidget->InsertRecentProjectCard(
+            Index,                                                                             /* 索引 */
+            QPixmap(":/Images/Public/XDefaultCover.png").scaled(120, 60, Qt::KeepAspectRatio), /* 封面 */
+            QString(cJSON_GetObjectItem(ProjectItem, "XName")->valuestring),                   /* 名称 */
+            QString(cJSON_GetObjectItem(ProjectItem, "XDescription")->valuestring));           /* 描述 */
+        Index++;
+    }
+    cJSON_Delete(ClipHallRootObject);
+}
+
 void Xncut::Sync()
 {
     /* 保存大厅数据 */
@@ -74,7 +99,7 @@ void Xncut::Sync()
     cJSON_AddItemToObject(Root, "XRecentProjectList", RecentProject);
 
     /* 写入到磁盘 */
-    qDebug() << XncutFunTool::WriteJson(Root, XncutRunTimeContext::GetXncutPath(), true);
+    XncutFunTool::WriteJson(Root, XncutRunTimeContext::GetXncutPath(), true);
     /********************************************************************************************************/
 }
 

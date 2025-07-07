@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 19:30:43
+ * @LastEditTime: 2025-07-07 22:57:54
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -51,6 +51,9 @@ public:
 
     /* 析构 */
     ~XncutClipHallWidget();
+
+    /* [工程选择器] 设置当前的工程名称 */
+    void SetCurrentProjectName(QString ProjectName);
 
     /* [工程选择器] 获取当前选中的工程名称 */
     QString GetCurrentProject();
