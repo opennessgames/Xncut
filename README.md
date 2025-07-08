@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-04-22 18:18:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 23:13:45
+ * @LastEditTime: 2025-07-08 23:13:15
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -32,6 +32,7 @@
 > 我们的目标是向企业级,系统级看齐; 做到和剪映,Pr一样的规模</br>
 > **C/C++**是很漂亮的语言, 人菜就是人菜, 人菜不要责怪工具</br>
 ![大厅截图](Doc/Image/ClipHall/ClipHall0.png)
+![工程管理器](Doc/Image/ProjectManager/ProjectModify0.png)
 
 # 项目类型
 面向`Linux`的非线性(NLE)混合剪辑软件
