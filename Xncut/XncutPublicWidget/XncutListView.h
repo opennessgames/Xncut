@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 18:32:25
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-05 19:34:02
+ * @LastEditTime: 2025-07-08 22:58:17
  * @FilePath: /Xncut/Xncut/XncutPublicWidget/XncutListView.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -34,6 +34,11 @@ protected:
     /* 重载事件 */
     /* 缩放事件 */
     void resizeEvent(QResizeEvent *Event) override;
+    /********************************************************************************************************/
+
+    /* 鼠标事件 */
+    /* 鼠标点击按下 */
+    void mousePressEvent(QMouseEvent *Event) override;
     /********************************************************************************************************/
 
 signals:

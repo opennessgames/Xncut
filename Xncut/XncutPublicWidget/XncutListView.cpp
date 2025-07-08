@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 18:32:28
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-05 14:46:50
+ * @LastEditTime: 2025-07-08 23:00:08
  * @FilePath: /Xncut/Xncut/XncutPublicWidget/XncutListView.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -45,4 +45,16 @@ void XncutListView::resizeEvent(QResizeEvent *Event)
 
     /* 继续向下传递 */
     QListView::resizeEvent(Event);
+}
+
+void XncutListView::mousePressEvent(QMouseEvent *Event)
+{
+    /* 鼠标下无效的Item */
+    if (!indexAt(Event->pos()).isValid())
+    {
+        clearSelection(); /* 清除全部选择 */
+    }
+
+    /* 继续向下传递 */
+    QListView::mousePressEvent(Event);
 }

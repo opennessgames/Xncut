@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 18:25:55
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:06:12
+ * @LastEditTime: 2025-07-08 22:20:48
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectManagerWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -26,6 +26,9 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
     /* 内容 */
     M_ProjectModifyWidget = new XncutProjectModifyWidget(); /* 工程管理 */
     M_ProjectCreateWidget = new XncutProjectCreateWidget(); /* 工程创建 */
+
+    /* 底部提示 */
+    M_BottomLabel = new QLabel("工程管理: 鼠标单击工程以获取管理选项, 右键获取更多选项; 双击以选择工程");
     /********************************************************************************************************/
 
     /* 设置属性 */
@@ -40,6 +43,10 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
     M_ContentsTabWidget->setMovable(true);
     M_ContentsTabWidget->addTab(M_ProjectModifyWidget, "工程管理");
     M_ContentsTabWidget->addTab(M_ProjectCreateWidget, "工程创建");
+    M_ContentsTabWidget->setCurrentIndex(0);
+
+    /* 底部提示 */
+    M_BottomLabel->adjustSize();
     /********************************************************************************************************/
 
     /* 设置布局 */
@@ -47,6 +54,7 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
     M_MainLayout->addWidget(M_TitleLabel, 0, 0, Qt::AlignLeft);
     M_MainLayout->addWidget(M_ReturnClipHallButton, 0, 1, Qt::AlignRight);
     M_MainLayout->addWidget(M_ContentsTabWidget, 1, 0, 1, 2);
+    M_MainLayout->addWidget(M_BottomLabel, 2, 0, 1, 2);
     /********************************************************************************************************/
 
     setLayout(M_MainLayout);

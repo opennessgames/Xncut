@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 20:11:09
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-05 15:12:17
+ * @LastEditTime: 2025-07-08 19:59:06
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutRecentProjectCardDelegate.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -16,7 +16,7 @@ class XncutRecentProjectCardDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
-    /* 工程卡片数据 */
+    /* 最近工程卡片数据 */
     typedef enum
     {
         PRO_CARD_DATA_DESCRIPTION = Qt::UserRole + 1, /* 描述 */

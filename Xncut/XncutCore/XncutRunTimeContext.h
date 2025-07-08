@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-04 10:01:23
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 20:11:53
+ * @LastEditTime: 2025-07-08 19:23:39
  * @FilePath: /Xncut/Xncut/XncutCore/XncutRunTimeContext.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -14,6 +14,7 @@
 
 /*
  * 在V7.1版本引入上下文类
+ * 能让代码活起来的类
  */
 
 class XncutRunTimeContext : public QObject

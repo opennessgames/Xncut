@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 15:45:06
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 22:22:09
+ * @LastEditTime: 2025-07-08 22:48:05
  * @FilePath: /Xncut/Xncut/XncutCore/XncutFunTool.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -80,7 +80,7 @@ bool XncutFunTool::WriteJson(cJSON *SrcObject, const char *DestFilePath, bool Is
      * 将cJSON转换成字符串,
      * 值得注意的是, 不应该提前转换, 如果fopen失败时, 这将会多一个free的步骤
      * */
-    char *JsonString = cJSON_Print(SrcObject);
+    char *JsonString = cJSON_PrintUnformatted(SrcObject);
     int JsonStringLen = strlen(JsonString); /* 计算字符串长度 */
     int BufferSize = 1024;                  /* 缓冲区大小 */
     int WriterLen = 0;

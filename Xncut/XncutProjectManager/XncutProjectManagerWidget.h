@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-06 18:25:55
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-06 22:04:11
+ * @LastEditTime: 2025-07-08 22:09:13
  * @FilePath: /Xncut/Xncut/XncutProjectManager/XncutProjectManagerWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -52,6 +52,10 @@ private:
     /* 内容 */
     XncutProjectModifyWidget *M_ProjectModifyWidget = NULL; /* 工程管理 */
     XncutProjectCreateWidget *M_ProjectCreateWidget = NULL; /* 工程创建 */
+    /********************************************************************************************************/
+
+    /* 底部提示 */
+    QLabel *M_BottomLabel = NULL;
     /********************************************************************************************************/
 };
 

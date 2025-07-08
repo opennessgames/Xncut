@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-02 12:38:58
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-07 23:09:06
+ * @LastEditTime: 2025-07-08 23:00:49
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -174,11 +174,6 @@ XncutClipHallWidget::~XncutClipHallWidget()
     /* 释放 */
     delete M_RecentProjectCardModel;
     delete M_RecentProjectCardDelegate;
-    foreach (QAction *Action, M_RecentProjectListViewContextMenu->actions())
-    {
-        delete Action;
-        Action = NULL;
-    }
     delete M_RecentProjectListViewContextMenu;
     delete M_RecentProjectCardSortFilterProxyModel;
 
@@ -353,11 +348,15 @@ void XncutClipHallWidget::SortByComboBoxCurrentIndexChanged(int Index)
 
 void XncutClipHallWidget::RecentProjectListViewCustomContextMenuRequested(const QPoint &Position)
 {
+    /* 鼠标下的Item */
+    QModelIndex ModelIndex = M_RecentProjectListView->indexAt(Position);
+
     /* 有效的项目 */
-    if (M_RecentProjectListView->indexAt(Position).isValid())
+    if (ModelIndex.isValid())
     {
-        /* 弹出菜单 */
-        M_RecentProjectListViewContextMenu->exec(QCursor::pos());
+        M_RecentProjectCardSelectionModel->clearSelection();
+        M_RecentProjectCardSelectionModel->select(ModelIndex, QItemSelectionModel::Select);
+        M_RecentProjectListViewContextMenu->exec(QCursor::pos()); /* 弹出菜单 */
     }
 }
 
