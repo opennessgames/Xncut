@@ -42,6 +42,12 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Src/XncutWelcome/XncutWelcomeScreen.h
         Src/XncutWelcome/XncutWelcomeScreen.cpp
         Assets/XncutWelcome.qrc
+        Src/XncutProjectManager/XncutProjectManagerWidget.h
+        Src/XncutProjectManager/XncutProjectManagerWidget.cpp
+        Src/XncutProjectManager/XncutProjectCreateWidget.h
+        Src/XncutProjectManager/XncutProjectCreateWidget.cpp
+        Src/XncutProjectManager/XncutProjectModifyWidget.h
+        Src/XncutProjectManager/XncutProjectModifyWidget.cpp
     )
     # Define target properties for Android with Qt 6 as:
     #    set_property(TARGET XncutUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
