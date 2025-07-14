@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:00:22
+ * @LastEditTime: 2025-07-14 18:32:09
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -10,6 +10,10 @@
 # **熙柠剪辑UI**
 > 此版本为UI, 没有业务逻辑,UI是纯代码布局<br/>
 > 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源
+
+# 为什么不用Electron
+> 多优点需要很大的代价的, 如果再增加新的优点时, 要保证和现有的优点不冲突<br/>
+> Electron固然方便,但是在方便快速的同时(这是优点),占用了大量的内存和存储(这是代价),并不都是16个G内存,1个T存储, 需要根据场景使用,别滥用。
 
 # 关于商业
 > 这个版本对于商用是不限制的, 你可以基于此UI开发你的业务逻辑
@@ -49,6 +53,7 @@
       - [FILE] XncutProjectCreateWidget.cpp
       - [FILE] XncutProjectModifyWidget.h **工程管理**
       - [FILE] XncutProjectModifyWidget.cpp
+    - [DIR] XncutEditor **编辑器** 
     - [FILE] Main.cpp **入口**
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
