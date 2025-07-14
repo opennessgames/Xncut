@@ -31,6 +31,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(XncutUI
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        Src/XncutClipHall/XncutClipHallWidget.h
+        Src/XncutClipHall/XncutClipHallWidget.cpp
+        Src/XncutClipHall/XncutUserInfoWidget.h
+        Src/XncutClipHall/XncutUserInfoWidget.cpp
+        Src/XncutPublicWidget/XncutListView.h
+        Src/XncutPublicWidget/XncutListView.cpp
+        Assets/XncutClipHall.qrc
+        Assets/XncutPublic.qrc
+        Src/XncutWelcome/XncutWelcomeScreen.h
+        Src/XncutWelcome/XncutWelcomeScreen.cpp
+        Assets/XncutWelcome.qrc
     )
     # Define target properties for Android with Qt 6 as:
     #    set_property(TARGET XncutUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
