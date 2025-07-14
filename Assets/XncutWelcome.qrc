@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Welcome/XStartBg.png</file>
+    </qresource>
+</RCC>

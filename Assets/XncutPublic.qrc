@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Public/XDefaultCover.png</file>
+        <file>Images/Public/XEmpty.png</file>
+        <file>Images/Public/XClearSearch.png</file>
+        <file>Images/Public/XPubgXncut.png</file>
+        <file>Images/Public/XClear.png</file>
+    </qresource>
+</RCC>

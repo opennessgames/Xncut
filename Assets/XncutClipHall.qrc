@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/ClipHall/XVipSix.png</file>
+        <file>Images/ClipHall/XHeadImg.png</file>
+        <file>Images/ClipHall/XStartIcon.png</file>
+        <file>Images/ClipHall/BottomMenu/XTemplate.png</file>
+        <file>Images/ClipHall/BottomMenu/XSetUp.png</file>
+        <file>Images/ClipHall/BottomMenu/XDataVideo.png</file>
+        <file>Images/ClipHall/BottomMenu/XScreenRecording.png</file>
+        <file>Images/ClipHall/BottomMenu/XLAN.png</file>
+        <file>Images/ClipHall/BottomMenu/XCommunity.png</file>
+    </qresource>
+</RCC>
