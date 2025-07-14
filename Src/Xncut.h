@@ -14,6 +14,7 @@
 #include <QStackedWidget>
 #include "XncutClipHall/XncutClipHallWidget.h"
 #include "XncutProjectManager/XncutProjectManagerWidget.h"
+#include "XncutEditor/XncutEditorWidget.h"
 
 class Xncut : public QMainWindow
 {
@@ -52,6 +53,7 @@ private:
     /* 内容部件 */
     XncutClipHallWidget *M_ClipHallWidget = NULL;             /* 剪辑大厅 */
     XncutProjectManagerWidget *M_ProjectManagerWidget = NULL; /* 工程管理器 */
+        XncutEditorWidget *M_EditorWidget = NULL;                 /* 编辑器 */
     /********************************************************************************************************/
 };
 
