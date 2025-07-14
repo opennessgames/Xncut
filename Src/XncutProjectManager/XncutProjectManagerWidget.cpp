@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:41:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:59:08
+ * @LastEditTime: 2025-07-14 18:16:35
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectManagerWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -12,6 +12,10 @@
 XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
     : QWidget(Parent)
 {
+    /* 日志 */
+    qDebug() << "Init Project manager";
+    /********************************************************************************************************/
+
     /* 初始化 */
     /* 主布局 */
     M_MainLayout = new QGridLayout(); /* 网格布局 */
@@ -70,6 +74,10 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
     /* 连接信号槽 */
     /* 返回大厅按钮被点击 */
     connect(M_ReturnClipHallButton, &QPushButton::clicked, this, &XncutProjectManagerWidget::ReturnClipHallButtonClicked);
+    /********************************************************************************************************/
+
+    /* 日志 */
+    qDebug() << "Init Project manager finish";
     /********************************************************************************************************/
 }
 
