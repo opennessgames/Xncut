@@ -2,13 +2,13 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:06:14
+ * @LastEditTime: 2025-07-14 17:31:21
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
-> 此版本为UI, 没有业务逻辑,UI纯代码布局<br/>
+> 此版本为UI, 没有业务逻辑,UI是纯代码布局<br/>
 > 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源
 
 # 关于商业
@@ -50,3 +50,7 @@
   - [FILE] CMakeLists.txt **Cmake的构建配置**
   - [FIEL] COPYING.AGPLv3 **AGPL协议**
   - [FILE] README.md **就是这个**
+
+# 其他
+1. 喜欢的话记得点个Star吧
+2. 如果你有更好的建议,issues吧,这对我非常重要!
