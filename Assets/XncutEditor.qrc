@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Editor/TitleBar/XLinuxTitle.png</file>
+        <file>Images/Editor/TitleBar/ReturnHall.png</file>
+        <file>Images/Editor/TitleBar/Effect.png</file>
+        <file>Images/Editor/TitleBar/Colorize.png</file>
+        <file>Images/Editor/TitleBar/Audio.png</file>
+        <file>Images/Editor/TitleBar/Editor.png</file>
+        <file>Images/Editor/TitleBar/MenuIcon/Help.png</file>
+        <file>Images/Editor/TitleBar/MenuIcon/Media.png</file>
+        <file>Images/Editor/TitleBar/MenuIcon/Save.png</file>
+        <file>Images/Editor/TitleBar/MenuIcon/Phone.png</file>
+        <file>Images/Editor/TitleBar/MenuIcon/PC.png</file>
+        <file>Images/Editor/Bins/MaterialField/GridView.png</file>
+        <file>Images/Editor/Bins/MaterialField/ListView.png</file>
+    </qresource>
+</RCC>
