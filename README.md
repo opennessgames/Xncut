@@ -2,13 +2,14 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:00:21
+ * @LastEditTime: 2025-07-14 17:06:14
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
 > 此版本为UI, 没有业务逻辑,UI纯代码布局<br/>
+> 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源
 
 # 关于商业
 > 这个版本对于商用是不限制的, 你可以基于此UI开发你的业务逻辑
