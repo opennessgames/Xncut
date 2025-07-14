@@ -11,14 +11,36 @@
 #define XNCUT_H
 
 #include <QMainWindow>
+#include <QStackedWidget>
+#include "XncutClipHall/XncutClipHallWidget.h"
 
 class Xncut : public QMainWindow
 {
     Q_OBJECT
-
+private:
 public:
     Xncut(QWidget *Parent = NULL);
     ~Xncut();
+
+private:
+private slots:
+
+protected:
+    /* 重载事件 */
+    /* 关闭事件 */
+    void closeEvent(QCloseEvent *Event) override;
+    /********************************************************************************************************/
+
+signals:
+
+private:
+    /* 主部件 */
+    QStackedWidget *M_CentralStackedWidget = NULL; /* 中心控件 */
+    /********************************************************************************************************/
+
+    /* 内容部件 */
+    XncutClipHallWidget *M_ClipHallWidget = NULL; /* 剪辑大厅 */
+    /********************************************************************************************************/
 };
 
 #endif // XNCUT_H

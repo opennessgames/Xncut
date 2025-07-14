@@ -9,6 +9,7 @@
 
 #include "Xncut.h"
 #include <QApplication>
+#include "XncutWelcome/XncutWelcomeScreen.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
 
     /* 初始化 */
     QApplication OpenGameApplication(argc, argv);
-    // XncutWelcomeScreen WelcomeScreen(NULL);
+    XncutWelcomeScreen WelcomeScreen(NULL);
 
     /* 设置属性 */
     OpenGameApplication.setOverrideCursor(Qt::WaitCursor); /* 等待光标 */
@@ -29,15 +30,15 @@ int main(int argc, char *argv[])
     /********************************************************************************************************/
 
     /* 欢迎屏幕 */
-    // WelcomeScreen.setPixmap(QPixmap("://Images/Welcome/XStartBg.png").scaled(900, 444, Qt::KeepAspectRatio));
-    // WelcomeScreen.showMessage("加载中,请耐心等待...", Qt::AlignBottom | Qt::AlignRight, QColor(255, 255, 255));
-    // WelcomeScreen.show();
+    WelcomeScreen.setPixmap(QPixmap("://Images/Welcome/XStartBg.png").scaled(900, 444, Qt::KeepAspectRatio));
+    WelcomeScreen.showMessage("加载中,请耐心等待...", Qt::AlignBottom | Qt::AlignRight, QColor(255, 255, 255));
+    WelcomeScreen.show();
     /********************************************************************************************************/
 
     /* 初始化主窗口 */
     Xncut XncutApplication;
     XncutApplication.setWindowTitle("剪辑大厅");
-    // WelcomeScreen.finish(&XncutApplication);
+    WelcomeScreen.finish(&XncutApplication);
     OpenGameApplication.restoreOverrideCursor(); /* 恢复正常 */
     XncutApplication.show();
     /********************************************************************************************************/
