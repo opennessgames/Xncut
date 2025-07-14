@@ -48,6 +48,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Src/XncutProjectManager/XncutProjectCreateWidget.cpp
         Src/XncutProjectManager/XncutProjectModifyWidget.h
         Src/XncutProjectManager/XncutProjectModifyWidget.cpp
+        Src/XncutEditor/XncutEditorWidget.h
+        Src/XncutEditor/XncutEditorWidget.cpp
+        Src/XncutEditor/XncutTitleBar/XncutTitleBarWidget.h
+        Src/XncutEditor/XncutTitleBar/XncutTitleBarWidget.cpp
+        Assets/XncutEditor.qrc
+        Src/XncutEditor/XncutBins/XncutBinsWidget.h
+        Src/XncutEditor/XncutBins/XncutBinsWidget.cpp
+        Src/XncutEditor/XncutBins/XncutMaterialField/XncutMaterialFieldWidget.h
+        Src/XncutEditor/XncutBins/XncutMaterialField/XncutMaterialFieldWidget.cpp
+        Src/XncutPublicStyle/XncutCustomTabStyle.h
+        Src/XncutPublicStyle/XncutCustomTabStyle.cpp
     )
     # Define target properties for Android with Qt 6 as:
     #    set_property(TARGET XncutUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
