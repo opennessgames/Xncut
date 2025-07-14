@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:34:39
+ * @LastEditTime: 2025-07-14 18:57:25
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -41,6 +41,9 @@
     - [DIR] XncutPublicWidget **共有部件**
       - [FILE] XncutListView.h **列表视图**
       - [FILE] XncutListView.cpp
+    - [DIR] XncutPublicStyle **公共样式**
+      - [FILE] XncutCustomTabStyle.h **TAB样式**
+      - [FILE] XncutCustomTabStyle.cpp
     - [DIR] XncutClipHall **剪辑大厅**
       - [FILE] XncutClipHallWidget.h **剪辑大厅部件**
       - [FILE] XncutClipHallWidget.cpp
@@ -53,7 +56,18 @@
       - [FILE] XncutProjectCreateWidget.cpp
       - [FILE] XncutProjectModifyWidget.h **工程管理**
       - [FILE] XncutProjectModifyWidget.cpp
-    - [DIR] XncutEditor **编辑器** 
+    - [DIR] XncutEditor **编辑器**
+      - [DIR] XncutTitleBar **标题栏**  
+        - [FILE] XncutTitleBarWidget.h **标题栏部件(实际上是布局)**
+        - [FILE] XncutTitleBarWidget.cpp
+      - [DIR] XncutBins **素材箱** 
+        - [DIR] XncutMaterialField **素材领域**
+          - [FILE] XncutMaterialFieldWidget.h **素材领域部件**
+          - [FILE] XncutMaterialFieldWidget.cpp
+        - [FILE] XncutBinsWidget.h **素材箱部件**
+        - [FILE] XncutBinsWidget.cpp
+      - [FILE] XncutEditorWidget.h **编辑器部件**
+      - [FILE] XncutEditorWidget.cpp
     - [FILE] Main.cpp **入口**
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
