@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 16:54:37
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:03:58
+ * @LastEditTime: 2025-07-14 17:41:48
  * @FilePath: /XncutUI/Src/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -13,6 +13,7 @@
 #include <QMainWindow>
 #include <QStackedWidget>
 #include "XncutClipHall/XncutClipHallWidget.h"
+#include "XncutProjectManager/XncutProjectManagerWidget.h"
 
 class Xncut : public QMainWindow
 {
@@ -24,6 +25,16 @@ public:
 
 private:
 private slots:
+    /* 跳转界面 */
+    /* 跳转到大厅 */
+    void JmpHall();
+
+    /* 跳转到工程管理 */
+    void JmpProjectManager();
+
+    /* 跳转到编辑器 */
+    void JmpEditor();
+    /********************************************************************************************************/
 
 protected:
     /* 重载事件 */
@@ -39,7 +50,8 @@ private:
     /********************************************************************************************************/
 
     /* 内容部件 */
-    XncutClipHallWidget *M_ClipHallWidget = NULL; /* 剪辑大厅 */
+    XncutClipHallWidget *M_ClipHallWidget = NULL;             /* 剪辑大厅 */
+    XncutProjectManagerWidget *M_ProjectManagerWidget = NULL; /* 工程管理器 */
     /********************************************************************************************************/
 };
 

@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:24:17
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:30:26
+ * @LastEditTime: 2025-07-14 17:55:00
  * @FilePath: /XncutUI/Src/XncutClipHall/XncutClipHallWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -25,25 +25,6 @@ class XncutClipHallWidget : public QWidget
 {
     Q_OBJECT
 private:
-    /* 搜索依据 */
-    typedef enum
-    {
-        /* 根据名称搜索 */
-        NAME = Qt::DisplayRole,
-        /* 根据描述搜索 */
-        DESCRIPTION,
-    } SearchBy;
-
-    /* 排序依据 */
-    typedef enum
-    {
-        LATEST = 0, /* 最新的 */
-        OLDEST,     /* 最旧的 */
-        UTMOST,     /* 最大的 */
-        LEAST,      /* 最小的 */
-    } SortBy;
-    /********************************************************************************************************/
-
 public:
     explicit XncutClipHallWidget(QWidget *Parent = NULL);
 
@@ -60,9 +41,22 @@ private:
     /********************************************************************************************************/
 
 private slots:
+    /* 大厅右侧 */
+    /* 工程背景被点击 */
+    void ProjectBackgroundClicked();
+
+    /* 开始按钮被点击 */
+    void StartButtonClicked();
+    /********************************************************************************************************/
 
 protected:
 signals:
+    /* 请求跳转到管理器 */
+    void HasJmpProjectManagerRequest();
+
+    /* 请求跳转到编辑器 */
+    void HasJmpEditorRequest();
+    /********************************************************************************************************/
 
 private:
     /* 主布局 */

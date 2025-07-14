@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:24:39
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:30:22
+ * @LastEditTime: 2025-07-14 17:57:09
  * @FilePath: /XncutUI/Src/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -74,16 +74,16 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     /* 搜索依据 */
     M_SearchByComboBox->setToolTip("搜索依据");
     M_SearchByComboBox->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
-    M_SearchByComboBox->addItem("根据名称搜索", NAME);
-    M_SearchByComboBox->addItem("根据描述搜索", DESCRIPTION);
+    M_SearchByComboBox->addItem("根据名称搜索");
+    M_SearchByComboBox->addItem("根据描述搜索");
     M_SearchByComboBox->setCurrentIndex(0); /* 默认是根据名称搜索 */
     /* 结果排序方式组合框 */
     M_SortByComboBox->setToolTip("排序依据");
     M_SortByComboBox->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
-    M_SortByComboBox->addItem("最新在前", LATEST);
-    M_SortByComboBox->addItem("最旧在前", OLDEST);
-    M_SortByComboBox->addItem("最大在前", UTMOST);
-    M_SortByComboBox->addItem("最小在前", LEAST);
+    M_SortByComboBox->addItem("最新在前");
+    M_SortByComboBox->addItem("最旧在前");
+    M_SortByComboBox->addItem("最大在前");
+    M_SortByComboBox->addItem("最小在前");
     M_SortByComboBox->setCurrentIndex(0); /* 默认是按照最新在前 */
     /* 清除最近工程列表 */
     M_ClearRecentListButton->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
@@ -176,6 +176,12 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     setLayout(M_MainLayout);
     /********************************************************************************************************/
 
+    /* 连接信号槽 */
+    /* 大厅右侧 */
+    connect(M_ProjectBgButton, &QPushButton::clicked, this, &XncutClipHallWidget::ProjectBackgroundClicked);
+    connect(M_StartButton, &QPushButton::clicked, this, &XncutClipHallWidget::StartButtonClicked);
+    /********************************************************************************************************/
+
     /* 日志 */
     qDebug() << "Init Clip hall finish";
     /********************************************************************************************************/
@@ -240,4 +246,14 @@ void XncutClipHallWidget::InitBottomMenuButton(QPushButton *Button, int ButtonIc
 
     Button->setIconSize(QSize(ButtonIconSize, ButtonIconSize));
     Button->setIcon(ButtonIcon);
+}
+
+void XncutClipHallWidget::ProjectBackgroundClicked()
+{
+    emit HasJmpProjectManagerRequest();
+}
+
+void XncutClipHallWidget::StartButtonClicked()
+{
+    emit HasJmpEditorRequest();
 }

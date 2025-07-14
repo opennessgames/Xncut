@@ -1,3 +1,12 @@
+/*
+ * @Author: xixi_
+ * @Date: 2025-07-14 17:20:41
+ * @LastEditors: xixi_
+ * @LastEditTime: 2025-07-14 17:51:23
+ * @FilePath: /XncutUI/Src/XncutClipHall/XncutUserInfoWidget.cpp
+ * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
+ */
+
 #include "XncutUserInfoWidget.h"
 
 XncutUserInfoWidget::XncutUserInfoWidget(QWidget *Parent)
