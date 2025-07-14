@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:31:21
+ * @LastEditTime: 2025-07-14 18:00:22
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -36,12 +36,19 @@
       - [FILE] XncutWelcomeScreen.cpp
     - [DIR] XncutPublicWidget **共有部件**
       - [FILE] XncutListView.h **列表视图**
-      - [FILE] XncutListView.cpp 
+      - [FILE] XncutListView.cpp
     - [DIR] XncutClipHall **剪辑大厅**
       - [FILE] XncutClipHallWidget.h **剪辑大厅部件**
       - [FILE] XncutClipHallWidget.cpp
       - [FILE] XncutUserInfoWidget.h **用户信息(实际上是布局)**
       - [FILE] XncutUserInfoWidget.cpp
+    - [DIR] XncutProjectManager **工程管理器**
+      - [FILE] XncutProjectManagerWidget.h **工程管理部件**
+      - [FILE] XncutProjectManagerWidget.cpp
+      - [FILE] XncutProjectCreateWidget.h **创建工程**
+      - [FILE] XncutProjectCreateWidget.cpp
+      - [FILE] XncutProjectModifyWidget.h **工程管理**
+      - [FILE] XncutProjectModifyWidget.cpp
     - [FILE] Main.cpp **入口**
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
