@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:49:07
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:50:59
+ * @LastEditTime: 2025-07-15 12:37:30
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectModifyWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -99,8 +99,9 @@ XncutProjectModifyWidget::XncutProjectModifyWidget(QWidget *Parent)
     /********************************************************************************************************/
 
     setLayout(M_MainLayout);
-    /********************************************************************************************************/}
+    /********************************************************************************************************/
+}
 
-    XncutProjectModifyWidget::~XncutProjectModifyWidget()
-    {
-    }
+XncutProjectModifyWidget::~XncutProjectModifyWidget()
+{
+}

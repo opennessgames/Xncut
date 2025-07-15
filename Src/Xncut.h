@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 16:54:37
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:41:48
+ * @LastEditTime: 2025-07-15 12:36:27
  * @FilePath: /XncutUI/Src/Xncut.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -53,7 +53,7 @@ private:
     /* 内容部件 */
     XncutClipHallWidget *M_ClipHallWidget = NULL;             /* 剪辑大厅 */
     XncutProjectManagerWidget *M_ProjectManagerWidget = NULL; /* 工程管理器 */
-        XncutEditorWidget *M_EditorWidget = NULL;                 /* 编辑器 */
+    XncutEditorWidget *M_EditorWidget = NULL;                 /* 编辑器 */
     /********************************************************************************************************/
 };
 
