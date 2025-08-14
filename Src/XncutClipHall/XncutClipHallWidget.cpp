@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:24:39
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:57:09
+ * @LastEditTime: 2025-08-15 00:52:10
  * @FilePath: /XncutUI/Src/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -225,7 +225,7 @@ void XncutClipHallWidget::InitClipHallRight()
     /* 底部菜单 */
     M_BottomMenuLayout = new QHBoxLayout();                                                    /* 底部菜单布局 */
     M_BottomMenuTipsLabel = new QLabel("双击最近工程列表项以快速选择,右击项目以获得更多选项"); /* 提示 */
-    M_ScreenRecordingButton = new QPushButton("录屏");                                         /* 录屏按钮 */
+    M_ScreenRecordingButton = new QPushButton("摄像机工具");                                   /* 录屏按钮 */
     M_DataVideoButton = new QPushButton("数据视频");                                           /* 数据视频按钮 */
     M_TemplateButton = new QPushButton("模板");                                                /* 模板按钮 */
     M_CommunityButton = new QPushButton("社区");                                               /* 社区按钮 */
