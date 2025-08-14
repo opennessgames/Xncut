@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:18:46
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:25:59
+ * @LastEditTime: 2025-08-15 01:29:41
  * @FilePath: /XncutUI/Src/XncutEditor/XncutEditorWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -15,6 +15,7 @@
 #include <QSplitter>
 #include "XncutTitleBar/XncutTitleBarWidget.h"
 #include "XncutBins/XncutBinsWidget.h"
+#include "XncutProjectMonitor/XncutProjectMonitorWidget.h"
 
 class XncutEditorWidget : public QWidget
 {
@@ -50,7 +51,8 @@ private:
     /********************************************************************************************************/
 
     /* 顶部核心模块 */
-    XncutBinsWidget *M_BinsWidget = NULL; /* 素材箱 */
+    XncutBinsWidget *M_BinsWidget = NULL;                     /* 素材箱 */
+    XncutProjectMonitorWidget *M_ProjectMonitorWidget = NULL; /* 监视器 */
     /********************************************************************************************************/
 
     /* 底部提示 */

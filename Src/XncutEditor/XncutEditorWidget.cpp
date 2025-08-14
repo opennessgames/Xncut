@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:18:46
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:21:49
+ * @LastEditTime: 2025-08-15 01:34:27
  * @FilePath: /XncutUI/Src/XncutEditor/XncutEditorWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -25,7 +25,8 @@ XncutEditorWidget::XncutEditorWidget(QWidget *Parent)
     M_BottomSplitter = new QSplitter(); /* 底部(工具 时间线 峰值表) 水平 */
 
     /* 核心模块 */
-    M_BinsWidget = new XncutBinsWidget(); /* 素材箱 */
+    M_BinsWidget = new XncutBinsWidget();                     /* 素材箱 */
+    M_ProjectMonitorWidget = new XncutProjectMonitorWidget(); /* 监视器 */
 
     /* 底部提示 */
     M_BottomTipsLabel = new QLabel("这是啥?这是啥?这是啥?这是啥?这是啥?这是啥?");
@@ -41,6 +42,7 @@ XncutEditorWidget::XncutEditorWidget(QWidget *Parent)
     /* 顶部 */
     M_TopSplitter->setChildrenCollapsible(false);
     M_TopSplitter->addWidget(M_BinsWidget);
+    M_TopSplitter->addWidget(M_ProjectMonitorWidget);
     /* 底部 */
     M_BottomSplitter->setChildrenCollapsible(false);
 
