@@ -2,14 +2,16 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-15 15:55:35
+ * @LastEditTime: 2025-08-15 00:52:31
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
-> 此版本为UI, 没有业务逻辑,UI是纯代码布局<br/>
-> 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源
+> 于2025年7月14日 下午 04∶54∶37立项 <br/>
+> 此版本为UI, 没有业务逻辑,UI是纯代码布局 <br/>
+> 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源 <br/>
+> 后续我会`push`一些测试的例子 <br/>
 
 # 为什么不用Electron
 > 多优点需要很大的代价的, 如果再增加新的优点时, 要保证和现有的优点不冲突<br/>
