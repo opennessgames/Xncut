@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-08-15 01:25:54
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 01:26:09
+ * @LastEditTime: 2025-08-15 02:01:28
  * @FilePath: /XncutUI/Src/XncutEditor/XncutProjectMonitor/XncutVideoWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -15,6 +15,9 @@
 class XncutVideoWidget : public QWidget
 {
     Q_OBJECT
+private:
+    /********************************************************************************************************/
+
 public:
     explicit XncutVideoWidget(QWidget *Parent = NULL);
     ~XncutVideoWidget();
