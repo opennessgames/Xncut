@@ -2,27 +2,30 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 01:13:10
+ * @LastEditTime: 2025-08-15 01:58:26
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
-> 于2025年7月14日 下午 04∶54∶37立项 <br/>
+> BY: 雷电法王杨永信(在B站名字)<br/>
+> 于2025-07-14 16:54:37立项 <br/>
 > 此版本为UI, 没有业务逻辑,UI是纯代码布局, 你也可以学习如何使用代码来布局<br/>
 > 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源 <br/>
-> 后续我会`push`一些测试的例子, 位于`Test`目录下 <br/>
+> 后续我会`push`一些测试的例子, 位于`Test`目录下
 
-# 为什么不用Electron
-> 多优点需要很大的代价的, 如果再增加新的优点时, 要保证和现有的优点不冲突<br/>
-> Electron固然方便,但是在方便快速的同时(这是优点),占用了大量的内存和存储(这是代价),每个人的电脑并不都是16个G内存,1个T存储, 需要根据场景使用, 别滥用。
+# Q&A: 为什么不用Electron
+杨永信认为这个问题非常好, 原因如下: 
+1. 多优点需要很大的代价的, 如果再增加新的优点时, 要保证和现有的优点不冲突<br/>
+2. Electron固然方便,但是在方便快速的同时(这是优点),占用了大量的内存和存储(这是代价),每个人的电脑并不都是16个G内存,1个T存储, 需要根据场景使用, 别滥用。<br/>
+3. 最重要的一点是`JavaScript`对于这样计算非常密集的场景是很吃力的
 
-# 关于商业
+# Q&A: 关于商业
 > 这个版本对于商用是不限制的, 你可以基于此UI开发你的业务逻辑<br/>
-> Q: 我基于**此项目**进行**二次开发**是否可以**不开放源代码**? 是否可以拿来**商业化**？ <br/>
-> A: 你可以**不开放源代码**, 注意的是, 你需要在源代码里保留相应的**版权信息**(这是必须的), 也可以拿来**商业化**, 具体取决与你。
+- Q: 我基于**此项目**进行**二次开发**是否可以**不开放源代码**? 是否可以拿来**商业化**？ <br/>
+- A: 你可以**不开放源代码**, 注意的是, 你需要在源代码里保留相应的**版权信息**(这是必须的), 也可以拿来**商业化**, 具体取决与你。
 
-# 我该如何运行?
+# Q&A: 我该如何运行?
 > 最简单的方法是使用`Qt Creator`来运行, 确保你的QT版本是较新的, 而不是过时的, 因为本项目使用的版本是`QT6.8.0`
 1. 克隆本项目
 ```bash
@@ -78,6 +81,11 @@ git clone https://github.com/opennessgames/Xncut
           - [FILE] XncutMaterialFieldWidget.cpp
         - [FILE] XncutBinsWidget.h **素材箱部件**
         - [FILE] XncutBinsWidget.cpp
+      - [DIR] XncutProjectMonitor **工程监视器**
+        - [FILE] XncutProjectMonitorWidget.h **工程监视器部件**
+        - [FILE] XncutProjectMonitorWidget.cpp
+        - [FILE] XncutVideoWidget.h **视频部件**
+        - [FILE] XncutVideoWidget.cpp 
       - [FILE] XncutEditorWidget.h **编辑器部件**
       - [FILE] XncutEditorWidget.cpp
     - [FILE] Main.cpp **入口**
@@ -92,5 +100,7 @@ git clone https://github.com/opennessgames/Xncut
 # 其他
 1. 喜欢的话记得点个Star吧
 2. 如果你有更好的建议,issues吧,这对我非常重要!
-3. 高中生活自由又自在，嘿嘿
-4. 时光过的真快啊, 共勉~
+3. 高中生活自由又自在，嘿嘿~
+4. 你一定要记住, 先开始, 后完美
+5. 奈何网络就是我的弱点啊, 尝试搓个网络模拟器吧, 感谢彭老师留的时间
+6. 高二的时光过的真TM快啊, 好好珍惜吧~
