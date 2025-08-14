@@ -13,5 +13,20 @@
         <file>Images/Editor/TitleBar/MenuIcon/PC.png</file>
         <file>Images/Editor/Bins/MaterialField/GridView.png</file>
         <file>Images/Editor/Bins/MaterialField/ListView.png</file>
+        <file>Images/Editor/Monitor/Snapshot.svg</file>
+        <file>Images/Editor/Monitor/PrevFrame.svg</file>
+        <file>Images/Editor/Monitor/Play.svg</file>
+        <file>Images/Editor/Monitor/Pause.svg</file>
+        <file>Images/Editor/Monitor/NextFrame.svg</file>
+        <file>Images/Editor/Monitor/MarkerInOutPoint.png</file>
+        <file>Images/Editor/Monitor/Marker.svg</file>
+        <file>Images/Editor/Monitor/GoOutPoint.svg</file>
+        <file>Images/Editor/Monitor/GoInPoint.svg</file>
+        <file>Images/Editor/Monitor/FullScreen.png</file>
+        <file>Images/Editor/Monitor/1609.svg</file>
+        <file>Images/Editor/Monitor/0916.svg</file>
+        <file>Images/Editor/Monitor/0403.svg</file>
+        <file>Images/Editor/Monitor/0304.svg</file>
+        <file>Images/Editor/Monitor/0101.svg</file>
     </qresource>
 </RCC>
