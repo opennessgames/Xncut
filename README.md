@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 01:58:26
+ * @LastEditTime: 2025-08-15 20:17:36
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -104,3 +104,7 @@ git clone https://github.com/opennessgames/Xncut
 4. 你一定要记住, 先开始, 后完美
 5. 奈何网络就是我的弱点啊, 尝试搓个网络模拟器吧, 感谢彭老师留的时间
 6. 高二的时光过的真TM快啊, 好好珍惜吧~
+
+# 你不怕失败吗
+> 哈哈, 我当然怕, 让我尝试一下, 万一成功了呢?  <br/>
+> 如果成功了, 剪映VIP是啥? Pr订阅费用是啥? 我不知道
