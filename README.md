@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-17 21:59:32
+ * @LastEditTime: 2025-08-18 13:13:55
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -75,6 +75,7 @@ git clone https://github.com/opennessgames/Xncut
       /* 比如小明约好了你去奶茶店, 你需要找到小明, 小明告诉你地址是奶茶店门口的长椅, 你去了奶茶店, 长椅上坐的并不是小明而是其他顾客,这个小明, 又TM放我鸽子 */
     }
     ```
+    - 在使用任何递归算法时, 必须进行评估, 确保不会爆栈(递归深度过大导致堆栈溢出); 如果出现爆栈, 则不应该使用递归, 而是由**迭代**取代**递归**
 
 # 核心模块
 > 主要分为四个核心模块
