@@ -2,14 +2,15 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-18 13:13:55
+ * @LastEditTime: 2025-08-31 19:43:34
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
 > BY: 雷电法王杨永信(在B站名字)<br/>
-> 于2025-07-14 16:54:37立项 <br/>
+> 熙柠剪辑于**2022年4月**左右首次立项(最初为**熙柠云剪**) <br/>
+> UI版于2025-07-14 16:54:37立项 <br/>
 > 此版本为UI, 没有业务逻辑,UI是纯代码布局, 你也可以学习如何使用代码来布局<br/>
 > 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源 <br/>
 > 后续我会`push`一些测试的例子, 位于`Test`目录下
@@ -32,6 +33,14 @@
 git clone https://github.com/opennessgames/Xncut
 ```
 2. 打开Qt Creator
+
+# 多快好省
+> 于**2025-08-31 19:43:34**提出软件版本的
+- 软件功能**多**
+- 代码执行速度**快**
+- 代码质量**好**
+- 更**省**资源, 内存, 磁盘, CPU
+- **微信**和**QQ**就是反面教材
 
 # 代码规范
 > 首先，使用**Markdown编辑器**或者**具有Markdown功能**的编辑器把**规范**完整的打一边, 然后, 全部删除掉, 不能按下**Ctrl+Z**, 立即关闭你的编辑器, 彻底的删掉<br/>
@@ -135,6 +144,7 @@ git clone https://github.com/opennessgames/Xncut
     - [FILE] Main.cpp **入口**
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
+  - [DIR] Test **测试例子**
   - [DIR] Data **一些配置**
   - [DIR] Doc **开发文档**
   - [FILE] CMakeLists.txt **Cmake的构建配置**
