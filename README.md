@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-31 19:43:34
+ * @LastEditTime: 2025-10-18 20:49:47
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -14,6 +14,9 @@
 > 此版本为UI, 没有业务逻辑,UI是纯代码布局, 你也可以学习如何使用代码来布局<br/>
 > 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源 <br/>
 > 后续我会`push`一些测试的例子, 位于`Test`目录下
+
+# 重要消息:
+1. 目前还在实现一些底层所需要的, 包括一些些小框架, 所以这个仓库将会很长一段时间不更新, 希望您知道
 
 # Q&A: 为什么不用Electron
 杨永信认为这个问题非常好, 原因如下: 
