@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-10-18 20:49:47
+ * @LastEditTime: 2025-10-25 13:24:34
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -17,6 +17,7 @@
 
 # 重要消息:
 1. 目前还在实现一些底层所需要的, 包括一些些小框架, 所以这个仓库将会很长一段时间不更新, 希望您知道
+2. 我尝试只使用Qt的**QWidget模块**, 其余的一律不用, 属性, 哈希表, 队列, 动态容器等等都是自己使用C语言实现的
 
 # Q&A: 为什么不用Electron
 杨永信认为这个问题非常好, 原因如下: 
@@ -148,6 +149,7 @@ git clone https://github.com/opennessgames/Xncut
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
   - [DIR] Test **测试例子**
+    - XncutThreeLayerLayout **三层垂直布局件**
   - [DIR] Data **一些配置**
   - [DIR] Doc **开发文档**
   - [FILE] CMakeLists.txt **Cmake的构建配置**
