@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-10-25 13:24:34
+ * @LastEditTime: 2025-10-30 23:09:49
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -149,7 +149,8 @@ git clone https://github.com/opennessgames/Xncut
     - [FILE] Xncut.h **主窗口,此文件等价于MainWindow.h**
     - [FILE] Xncut.cpp
   - [DIR] Test **测试例子**
-    - XncutThreeLayerLayout **三层垂直布局件**
+    - [DIR] XncutThreeLayerLayout **三层垂直布局部件**
+    - [DIR] XncutAbstractTabItemView **抽象标签视图部件**
   - [DIR] Data **一些配置**
   - [DIR] Doc **开发文档**
   - [FILE] CMakeLists.txt **Cmake的构建配置**
