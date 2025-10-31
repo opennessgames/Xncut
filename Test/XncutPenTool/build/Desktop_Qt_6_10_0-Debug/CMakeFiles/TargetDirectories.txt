@@ -1,0 +1,9 @@
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/XncutPenTool.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/edit_cache.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/rebuild_cache.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/list_install_components.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/install.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/install/local.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/install/strip.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/XncutPenTool_autogen_timestamp_deps.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/Desktop_Qt_6_10_0-Debug/CMakeFiles/XncutPenTool_autogen.dir

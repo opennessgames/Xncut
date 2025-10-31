@@ -1,0 +1,310 @@
+{
+    "XPoints": [
+        {
+            "XInPointX": 211,
+            "XInPointY": 157,
+            "XIsAltAdjust": false,
+            "XOutPointX": 211,
+            "XOutPointY": 157,
+            "XPointX": 211,
+            "XPointY": 157
+        },
+        {
+            "XInPointX": 320,
+            "XInPointY": 40,
+            "XIsAltAdjust": true,
+            "XOutPointX": 269,
+            "XOutPointY": 89,
+            "XPointX": 316,
+            "XPointY": 122
+        },
+        {
+            "XInPointX": 516,
+            "XInPointY": 87,
+            "XIsAltAdjust": false,
+            "XOutPointX": 390,
+            "XOutPointY": 101,
+            "XPointX": 453,
+            "XPointY": 94
+        },
+        {
+            "XInPointX": 723,
+            "XInPointY": 108,
+            "XIsAltAdjust": false,
+            "XOutPointX": 563,
+            "XOutPointY": 72,
+            "XPointX": 643,
+            "XPointY": 90
+        },
+        {
+            "XInPointX": 791,
+            "XInPointY": 136,
+            "XIsAltAdjust": false,
+            "XOutPointX": 783,
+            "XOutPointY": 128,
+            "XPointX": 787,
+            "XPointY": 132
+        },
+        {
+            "XInPointX": 833,
+            "XInPointY": 216,
+            "XIsAltAdjust": false,
+            "XOutPointX": 819,
+            "XOutPointY": 196,
+            "XPointX": 826,
+            "XPointY": 206
+        },
+        {
+            "XInPointX": 836,
+            "XInPointY": 314,
+            "XIsAltAdjust": false,
+            "XOutPointX": 836,
+            "XOutPointY": 308,
+            "XPointX": 836,
+            "XPointY": 311
+        },
+        {
+            "XInPointX": 776,
+            "XInPointY": 328,
+            "XIsAltAdjust": false,
+            "XOutPointX": 882,
+            "XOutPointY": 320,
+            "XPointX": 829,
+            "XPointY": 324
+        },
+        {
+            "XInPointX": 663,
+            "XInPointY": 338,
+            "XIsAltAdjust": false,
+            "XOutPointX": 791,
+            "XOutPointY": 336,
+            "XPointX": 727,
+            "XPointY": 337
+        },
+        {
+            "XInPointX": 550,
+            "XInPointY": 343,
+            "XIsAltAdjust": false,
+            "XOutPointX": 654,
+            "XOutPointY": 335,
+            "XPointX": 602,
+            "XPointY": 339
+        },
+        {
+            "XInPointX": 482,
+            "XInPointY": 351,
+            "XIsAltAdjust": false,
+            "XOutPointX": 582,
+            "XOutPointY": 347,
+            "XPointX": 532,
+            "XPointY": 349
+        },
+        {
+            "XInPointX": 409,
+            "XInPointY": 359,
+            "XIsAltAdjust": false,
+            "XOutPointX": 487,
+            "XOutPointY": 355,
+            "XPointX": 448,
+            "XPointY": 357
+        },
+        {
+            "XInPointX": 290,
+            "XInPointY": 364,
+            "XIsAltAdjust": false,
+            "XOutPointX": 442,
+            "XOutPointY": 368,
+            "XPointX": 366,
+            "XPointY": 366
+        },
+        {
+            "XInPointX": 199,
+            "XInPointY": 364,
+            "XIsAltAdjust": false,
+            "XOutPointX": 263,
+            "XOutPointY": 374,
+            "XPointX": 231,
+            "XPointY": 369
+        },
+        {
+            "XInPointX": 126,
+            "XInPointY": 339,
+            "XIsAltAdjust": false,
+            "XOutPointX": 202,
+            "XOutPointY": 375,
+            "XPointX": 164,
+            "XPointY": 357
+        },
+        {
+            "XInPointX": 105,
+            "XInPointY": 316,
+            "XIsAltAdjust": false,
+            "XOutPointX": 121,
+            "XOutPointY": 352,
+            "XPointX": 113,
+            "XPointY": 334
+        },
+        {
+            "XInPointX": 104,
+            "XInPointY": 288,
+            "XIsAltAdjust": false,
+            "XOutPointX": 104,
+            "XOutPointY": 334,
+            "XPointX": 104,
+            "XPointY": 311
+        },
+        {
+            "XInPointX": 92,
+            "XInPointY": 230,
+            "XIsAltAdjust": false,
+            "XOutPointX": 116,
+            "XOutPointY": 334,
+            "XPointX": 104,
+            "XPointY": 282
+        },
+        {
+            "XInPointX": 77,
+            "XInPointY": 184,
+            "XIsAltAdjust": false,
+            "XOutPointX": 105,
+            "XOutPointY": 270,
+            "XPointX": 91,
+            "XPointY": 227
+        },
+        {
+            "XInPointX": 66,
+            "XInPointY": 152,
+            "XIsAltAdjust": false,
+            "XOutPointX": 86,
+            "XOutPointY": 204,
+            "XPointX": 76,
+            "XPointY": 178
+        },
+        {
+            "XInPointX": 60,
+            "XInPointY": 94,
+            "XIsAltAdjust": false,
+            "XOutPointX": 60,
+            "XOutPointY": 180,
+            "XPointX": 60,
+            "XPointY": 137
+        },
+        {
+            "XInPointX": 102,
+            "XInPointY": 110,
+            "XIsAltAdjust": false,
+            "XOutPointX": 52,
+            "XOutPointY": 74,
+            "XPointX": 77,
+            "XPointY": 92
+        },
+        {
+            "XInPointX": 172,
+            "XInPointY": 207,
+            "XIsAltAdjust": false,
+            "XOutPointX": 68,
+            "XOutPointY": 77,
+            "XPointX": 120,
+            "XPointY": 142
+        },
+        {
+            "XInPointX": 258,
+            "XInPointY": 240,
+            "XIsAltAdjust": false,
+            "XOutPointX": 104,
+            "XOutPointY": 192,
+            "XPointX": 181,
+            "XPointY": 216
+        },
+        {
+            "XInPointX": 355,
+            "XInPointY": 262,
+            "XIsAltAdjust": false,
+            "XOutPointX": 313,
+            "XOutPointY": 248,
+            "XPointX": 334,
+            "XPointY": 255
+        },
+        {
+            "XInPointX": 426,
+            "XInPointY": 273,
+            "XIsAltAdjust": false,
+            "XOutPointX": 370,
+            "XOutPointY": 273,
+            "XPointX": 398,
+            "XPointY": 273
+        },
+        {
+            "XInPointX": 517,
+            "XInPointY": 238,
+            "XIsAltAdjust": false,
+            "XOutPointX": 495,
+            "XOutPointY": 308,
+            "XPointX": 506,
+            "XPointY": 273
+        },
+        {
+            "XInPointX": 481,
+            "XInPointY": 197,
+            "XIsAltAdjust": false,
+            "XOutPointX": 557,
+            "XOutPointY": 265,
+            "XPointX": 519,
+            "XPointY": 231
+        },
+        {
+            "XInPointX": 445,
+            "XInPointY": 185,
+            "XIsAltAdjust": false,
+            "XOutPointX": 485,
+            "XOutPointY": 185,
+            "XPointX": 465,
+            "XPointY": 185
+        },
+        {
+            "XInPointX": 364,
+            "XInPointY": 214,
+            "XIsAltAdjust": false,
+            "XOutPointX": 414,
+            "XOutPointY": 204,
+            "XPointX": 389,
+            "XPointY": 209
+        },
+        {
+            "XInPointX": 266,
+            "XInPointY": 191,
+            "XIsAltAdjust": false,
+            "XOutPointX": 400,
+            "XOutPointY": 237,
+            "XPointX": 333,
+            "XPointY": 214
+        },
+        {
+            "XInPointX": 204,
+            "XInPointY": 149,
+            "XIsAltAdjust": true,
+            "XOutPointX": 288,
+            "XOutPointY": 283,
+            "XPointX": 256,
+            "XPointY": 187
+        },
+        {
+            "XInPointX": 216,
+            "XInPointY": 160,
+            "XIsAltAdjust": false,
+            "XOutPointX": 218,
+            "XOutPointY": 160,
+            "XPointX": 217,
+            "XPointY": 160
+        },
+        {
+            "XInPointX": 211,
+            "XInPointY": 157,
+            "XIsAltAdjust": false,
+            "XOutPointX": 211,
+            "XOutPointY": 157,
+            "XPointX": 211,
+            "XPointY": 157
+        }
+    ]
+}

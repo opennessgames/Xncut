@@ -1,0 +1,8 @@
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/XncutPenTool.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/edit_cache.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/rebuild_cache.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/install.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/install/local.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/install/strip.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/XncutPenTool_autogen_timestamp_deps.dir
+/home/yyx/openGAME/Xncut/Test/XncutPenTool/build/CMakeFiles/XncutPenTool_autogen.dir
