@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-10-30 22:26:02
  * @LastEditors: xixi_
- * @LastEditTime: 2025-10-30 23:07:15
+ * @LastEditTime: 2025-10-30 23:51:57
  * @FilePath: /XncutUI/Test/XncutAbstractTabItemView/XncutMyAssetsWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -23,8 +23,8 @@ XncutMyAssetsWidget::XncutMyAssetsWidget(QWidget *Parent)
     M_StandardItemModel = new QStandardItemModel();
     /********************************************************************************************************/
 
-    GetTabBar()->addTab("测试1");
-    GetTabBar()->addTab("测试1");
+    GetTabBar()->addTab("类型1");
+    GetTabBar()->addTab("类型2");
     /********************************************************************************************************/
 
     QLineEdit *LineEdit = new QLineEdit();
