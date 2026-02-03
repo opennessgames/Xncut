@@ -2,12 +2,13 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:24:39
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 00:52:10
+ * @LastEditTime: 2026-02-04 03:22:52
  * @FilePath: /XncutUI/Src/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
 
 #include "XncutClipHallWidget.h"
+#include <QToolBar>
 
 /* 图标大小 */
 #define CLIP_HALL_ICON_SIZE 30
@@ -21,7 +22,7 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
 
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QHBoxLayout(); /* 网格布局 */
+    QHBoxLayout *MainLayout = new QHBoxLayout(); /* 网格布局 */
 
     /* 大厅左侧 */
     InitClipHallLeft();
@@ -72,19 +73,21 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     M_ClearSearchButton->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
     M_ClearSearchButton->setIcon(QIcon("://Images/Public/XClearSearch.png"));
     /* 搜索依据 */
-    M_SearchByComboBox->setToolTip("搜索依据");
+    M_SearchByComboBox->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
     M_SearchByComboBox->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
     M_SearchByComboBox->addItem("根据名称搜索");
     M_SearchByComboBox->addItem("根据描述搜索");
     M_SearchByComboBox->setCurrentIndex(0); /* 默认是根据名称搜索 */
+    M_SearchByComboBox->setStatusTip("搜索依据");
     /* 结果排序方式组合框 */
-    M_SortByComboBox->setToolTip("排序依据");
+    M_SortByComboBox->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
     M_SortByComboBox->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
     M_SortByComboBox->addItem("最新在前");
     M_SortByComboBox->addItem("最旧在前");
     M_SortByComboBox->addItem("最大在前");
     M_SortByComboBox->addItem("最小在前");
     M_SortByComboBox->setCurrentIndex(0); /* 默认是按照最新在前 */
+    M_SortByComboBox->setStatusTip("排序依据");
     /* 清除最近工程列表 */
     M_ClearRecentListButton->setIconSize(QSize(CLIP_HALL_ICON_SIZE, CLIP_HALL_ICON_SIZE));
     M_ClearRecentListButton->setIcon(QIcon("://Images/Public/XClear.png"));
@@ -101,14 +104,6 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     M_RecentProjectListView->setDragDropMode(QListView::NoDragDrop);
     M_RecentProjectListView->setSpacing(5);
     M_RecentProjectListView->setViewMode(QListView::ListMode);
-
-    /* 底部菜单按钮 */
-    InitBottomMenuButton(M_ScreenRecordingButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XScreenRecording.png"));
-    InitBottomMenuButton(M_DataVideoButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XDataVideo.png"));
-    InitBottomMenuButton(M_TemplateButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XTemplate.png"));
-    InitBottomMenuButton(M_CommunityButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XCommunity.png"));
-    InitBottomMenuButton(M_SetUpButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XSetUp.png"));
-    InitBottomMenuButton(M_LocalAreaNetCollButton, CLIP_HALL_ICON_SIZE, QIcon("://Images/ClipHall/BottomMenu/XLAN.png"));
     /********************************************************************************************************/
 
     /* 设置布局 */
@@ -120,60 +115,21 @@ XncutClipHallWidget::XncutClipHallWidget(QWidget *Parent)
     M_LeftLayout->addWidget(M_TextEdit);
     M_LeftLayout->addLayout(M_UserInfoWidget);
 
-    // /* 大厅右侧布局(网格布局) */
-    // M_RightLayout->setSpacing(5);
-    // M_RightLayout->addWidget(M_TitleTextLabel, 0, 0, Qt::AlignLeft);
-    // M_RightLayout->addWidget(M_SearchLineEdit, 0, 1,1,23, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_ClearSearchButton, 0, 2, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_SearchByComboBox, 0, 3, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_SortByComboBox, 0, 4, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_ClearRecentListButton, 0, 5, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_RecentProjectListView, 1, 0, 1, 7);
-    // M_RightLayout->addWidget(M_BottomMenuTipsLabel, 2, 0, Qt::AlignLeft);
-    // M_RightLayout->addWidget(M_ScreenRecordingButton, 2, 1, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_DataVideoButton, 2, 2, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_TemplateButton, 2, 3, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_CommunityButton, 2, 4, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_SetUpButton, 2, 5, Qt::AlignRight);
-    // M_RightLayout->addWidget(M_LocalAreaNetCollButton, 2, 6, Qt::AlignRight);
-
-    /* [大厅右侧:最近工程] 搜索工程布局  */
-    M_SearchLayout->setContentsMargins(0, 0, 0, 0);
-    M_SearchLayout->setSpacing(5);
-    M_SearchLayout->addWidget(M_TitleTextLabel);
-    M_SearchLayout->addWidget(M_SearchLineEdit);
-    M_SearchLayout->addWidget(M_ClearSearchButton);
-    M_SearchLayout->addWidget(M_SearchByComboBox);
-    M_SearchLayout->addWidget(M_SortByComboBox);
-    M_SearchLayout->addWidget(M_ClearRecentListButton);
-
-    /* 底部菜单布局 */
-    M_BottomMenuLayout->setContentsMargins(0, 0, 0, 0);
-    M_BottomMenuLayout->setSpacing(5);
-    M_BottomMenuLayout->addWidget(M_BottomMenuTipsLabel);
-    M_BottomMenuLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Maximum));
-    M_BottomMenuLayout->addWidget(M_ScreenRecordingButton);
-    M_BottomMenuLayout->addWidget(M_DataVideoButton);
-    M_BottomMenuLayout->addWidget(M_TemplateButton);
-    M_BottomMenuLayout->addWidget(M_CommunityButton);
-    M_BottomMenuLayout->addWidget(M_SetUpButton);
-    M_BottomMenuLayout->addWidget(M_LocalAreaNetCollButton);
-
     /* 大厅右侧布局 */
     M_RightLayout->setContentsMargins(0, 0, 0, 0);
     M_RightLayout->setSpacing(5);
-    M_RightLayout->addLayout(M_SearchLayout);
+    M_RightLayout->addWidget(M_SearchToolBar);
     M_RightLayout->addWidget(M_RecentProjectListView);
-    M_RightLayout->addLayout(M_BottomMenuLayout);
+    M_RightLayout->addWidget(M_RecoFuncToolBar);
 
     /* 设置布局 */
-    M_MainLayout->setContentsMargins(0, 0, 0, 0);
-    M_MainLayout->setSpacing(10);
-    M_MainLayout->addWidget(M_LeftWidget);
-    M_MainLayout->addLayout(M_RightLayout);
+    MainLayout->setContentsMargins(0, 0, 0, 0);
+    MainLayout->setSpacing(10);
+    MainLayout->addWidget(M_LeftWidget);
+    MainLayout->addLayout(M_RightLayout);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 
     /* 连接信号槽 */
@@ -212,8 +168,7 @@ void XncutClipHallWidget::InitClipHallRight()
 
     /* 最近工程区域 */
     /* 搜索工程 */
-    M_SearchLayout = new QHBoxLayout();                        /* 水平布局 */
-    M_TitleTextLabel = new QLabel("最近工程");                 /* 最近工程(标题)文案 */
+    M_SearchToolBar = new QToolBar();                          /* 水平布局 */
     M_SearchLineEdit = new QLineEdit();                        /* 行搜索框 */
     M_ClearSearchButton = new QPushButton();                   /* 清除搜索 */
     M_SearchByComboBox = new QComboBox();                      /* 搜索依据 */
@@ -222,30 +177,28 @@ void XncutClipHallWidget::InitClipHallRight()
     /* 最近工程列表 */
     M_RecentProjectListView = new XncutListView();
 
+    M_SearchToolBar->addWidget(new QLabel("最近工程: ")); /* 最近工程(标题)文案 */
+    M_SearchToolBar->addWidget(M_SearchLineEdit);
+    M_SearchToolBar->addWidget(M_ClearSearchButton);
+    M_SearchToolBar->addWidget(M_SearchByComboBox);
+    M_SearchToolBar->addWidget(M_SortByComboBox);
+    M_SearchToolBar->addWidget(M_ClearRecentListButton);
+
     /* 底部菜单 */
-    M_BottomMenuLayout = new QHBoxLayout();                                                    /* 底部菜单布局 */
-    M_BottomMenuTipsLabel = new QLabel("双击最近工程列表项以快速选择,右击项目以获得更多选项"); /* 提示 */
-    M_ScreenRecordingButton = new QPushButton("摄像机工具");                                   /* 录屏按钮 */
-    M_DataVideoButton = new QPushButton("数据视频");                                           /* 数据视频按钮 */
-    M_TemplateButton = new QPushButton("模板");                                                /* 模板按钮 */
-    M_CommunityButton = new QPushButton("社区");                                               /* 社区按钮 */
-    M_SetUpButton = new QPushButton("设置");                                                   /* 设置按钮 */
-    M_LocalAreaNetCollButton = new QPushButton("局域网互协");                                  /* 局域互协按钮 */
-}
+    QWidget *LeftSpacingWidget = new QWidget(); /* 左边间隔器 */
+    M_RecoFuncToolBar = new QToolBar();         /* 底部菜单布局 */
 
-void XncutClipHallWidget::InitBottomMenuButton(QPushButton *Button, int ButtonIconSize, QIcon ButtonIcon)
-{
-    /**
-     * 确保按钮是有效的
-     * 这个判断有点多余
-     **/
-    if (!Button)
-    {
-        return;
-    }
-
-    Button->setIconSize(QSize(ButtonIconSize, ButtonIconSize));
-    Button->setIcon(ButtonIcon);
+    LeftSpacingWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum);
+    M_RecoFuncToolBar->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+    M_RecoFuncToolBar->setIconSize(QSize(30, 30));
+    M_RecoFuncToolBar->addWidget(LeftSpacingWidget);
+    M_RecoFuncToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XScreenRecording.png"), "摄像机工具");
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XDataVideo.png"), "数据视频");
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XTemplate.png"), "模板");
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XCommunity.png"), "社区");
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XSetUp.png"), "设置");
+    M_RecoFuncToolBar->addAction(QIcon("://Images/ClipHall/BottomMenu/XLAN.png"), "局域网互协");
 }
 
 void XncutClipHallWidget::ProjectBackgroundClicked()

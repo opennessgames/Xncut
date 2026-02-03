@@ -2,12 +2,13 @@
  * @Author: xixi_
  * @Date: 2025-07-14 16:54:37
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:42:01
+ * @LastEditTime: 2026-02-04 02:26:43
  * @FilePath: /XncutUI/Src/Xncut.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
 
 #include "Xncut.h"
+#include <QStatusBar>
 #include <QCloseEvent>
 
 Xncut::Xncut(QWidget *Parent)
@@ -21,6 +22,8 @@ Xncut::Xncut(QWidget *Parent)
     M_ClipHallWidget = new XncutClipHallWidget();             /* 剪辑大厅 */
     M_ProjectManagerWidget = new XncutProjectManagerWidget(); /* 工程管理器 */
     M_EditorWidget = new XncutEditorWidget();                 /* 编辑器 */
+
+    QStatusBar *StatusBar = new QStatusBar();
     /********************************************************************************************************/
 
     /* 设置属性 */
@@ -31,8 +34,8 @@ Xncut::Xncut(QWidget *Parent)
     M_CentralStackedWidget->setCurrentWidget(M_ClipHallWidget); /* 当前为大厅 */
     /********************************************************************************************************/
 
-    /* 设置中心控件 */
-    setCentralWidget(M_CentralStackedWidget);
+    setCentralWidget(M_CentralStackedWidget); /* 设置中心控件 */
+    setStatusBar(StatusBar);                  /* 设置状态栏 */
     /********************************************************************************************************/
 
     /* 连接信号槽 */

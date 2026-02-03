@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:48:50
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:51:52
+ * @LastEditTime: 2026-02-04 02:32:19
  * @FilePath: /XncutUI/Src/XncutEditor/XncutBins/XncutBinsWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -39,7 +39,10 @@ signals:
     /********************************************************************************************************/
 
 private:
-    /* 共享样式 */
+    /**
+     * @brief 共享样式
+     * TODO: 单例模式
+     **/
     XncutCustomTabStyle *M_ShareCustomTabStyle = NULL;
     /********************************************************************************************************/
 

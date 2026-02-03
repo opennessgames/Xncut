@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:18:46
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 02:40:32
+ * @LastEditTime: 2026-02-04 02:25:58
  * @FilePath: /XncutUI/Src/XncutEditor/XncutEditorWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -37,8 +37,6 @@ signals:
     /********************************************************************************************************/
 
 private:
-    /* 主布局 */
-    QGridLayout *M_MainLayout = NULL; /* 网格布局 */
     QSplitter *M_MainSplitter = NULL; /* 主分割线 */
     /********************************************************************************************************/
 
@@ -57,8 +55,6 @@ private:
     XncutInspectorWidget *M_InspectorWidget = NULL;           /* 检查器 */
     /********************************************************************************************************/
 
-    /* 底部提示 */
-    QLabel *M_BottomTipsLabel = NULL;
     /********************************************************************************************************/
 };
 

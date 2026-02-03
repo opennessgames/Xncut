@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:23:57
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:26:10
+ * @LastEditTime: 2026-02-04 02:44:56
  * @FilePath: /XncutUI/Src/XncutEditor/XncutTitleBar/XncutTitleBarWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -10,13 +10,11 @@
 #ifndef XNCUT_TITLE_BAR_WIDGET_H
 #define XNCUT_TITLE_BAR_WIDGET_H
 
-#include <QHBoxLayout>
+#include <QToolBar>
 #include <QLabel>
 #include <QMenuBar>
-#include <QButtonGroup>
-#include <QPushButton>
 
-class XncutTitleBarWidget : public QHBoxLayout
+class XncutTitleBarWidget : public QToolBar
 {
     Q_OBJECT
 private:
@@ -25,8 +23,6 @@ public:
     ~XncutTitleBarWidget();
 
 private:
-    /* 初始化按钮 */
-    void InitButton(QPushButton *Button, int IconSize, QString StyleSheet, bool IsAddGroup, int Index = -1);
     /********************************************************************************************************/
 
 private slots:
@@ -41,18 +37,19 @@ private:
     /* 菜单 */
     QMenuBar *M_TitleBarMenu = NULL; /* 标题栏菜单 */
     /* 右侧导航 */
-    QButtonGroup *M_EditorModleButtonGroup = NULL; /* 按钮组合 */
+    QActionGroup *M_EditorModleActionGroup = NULL; /* 动作组合 */
     /********************************************************************************************************/
 
-public:
-    /* 按钮 */
-    QPushButton *M_EditorButton = NULL; /* 编辑模式 */
-    QPushButton *M_ColorButton = NULL;  /* 颜色模式 */
-    QPushButton *M_EffectButton = NULL; /* 效果模式 */
-    QPushButton *M_AudioButton = NULL;  /* 音频模式 */
-    QFrame *M_Divider = NULL;           /* 分割线 */
-    QPushButton *M_ReturnButton = NULL; /* 返回大厅 */
+private:
+    /* 动作 */
+    QAction *M_EditorButton = NULL; /* 编辑模式 */
+    QAction *M_ColorButton = NULL;  /* 颜色模式 */
+    QAction *M_EffectButton = NULL; /* 效果模式 */
+    QAction *M_AudioButton = NULL;  /* 音频模式 */
+    QAction *M_ReturnAction = NULL; /* 返回大厅 */
     /********************************************************************************************************/
+
+    friend class XncutEditorWidget;
 };
 
 #endif // XNCUT_TITLE_BAR_WIDGET_H

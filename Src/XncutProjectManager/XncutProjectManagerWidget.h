@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:40:37
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:58:02
+ * @LastEditTime: 2026-02-04 02:30:10
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectManagerWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -38,10 +38,6 @@ signals:
     /********************************************************************************************************/
 
 private:
-    /* 主布局 */
-    QGridLayout *M_MainLayout = NULL; /* 网格布局 */
-    /********************************************************************************************************/
-
     /* 标题 */
     QLabel *M_TitleLabel = NULL;                /* 标签 */
     QPushButton *M_ReturnClipHallButton = NULL; /* 返回大厅按钮 */

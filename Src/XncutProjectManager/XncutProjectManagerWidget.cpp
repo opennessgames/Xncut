@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:41:18
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:16:35
+ * @LastEditTime: 2026-02-04 02:30:15
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectManagerWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -18,7 +18,7 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
 
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QGridLayout(); /* 网格布局 */
+    QGridLayout *MainLayout = new QGridLayout(); /* 网格布局 */
 
     /* 标题 */
     M_TitleLabel = new QLabel("工程管理");                /* 标签 */
@@ -62,13 +62,13 @@ XncutProjectManagerWidget::XncutProjectManagerWidget(QWidget *Parent)
 
     /* 设置布局 */
     /* 主布局 */
-    M_MainLayout->addWidget(M_TitleLabel, 0, 0, Qt::AlignLeft);
-    M_MainLayout->addWidget(M_ReturnClipHallButton, 0, 1, Qt::AlignRight);
-    M_MainLayout->addWidget(M_ContentsTabWidget, 1, 0, 1, 2);
-    M_MainLayout->addWidget(M_BottomLabel, 2, 0, 1, 2);
+    MainLayout->addWidget(M_TitleLabel, 0, 0, Qt::AlignLeft);
+    MainLayout->addWidget(M_ReturnClipHallButton, 0, 1, Qt::AlignRight);
+    MainLayout->addWidget(M_ContentsTabWidget, 1, 0, 1, 2);
+    MainLayout->addWidget(M_BottomLabel, 2, 0, 1, 2);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 
     /* 连接信号槽 */

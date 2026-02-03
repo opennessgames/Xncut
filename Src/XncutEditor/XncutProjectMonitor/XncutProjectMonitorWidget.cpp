@@ -2,12 +2,13 @@
  * @Author: xixi_
  * @Date: 2025-08-15 01:21:30
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 01:30:37
+ * @LastEditTime: 2026-02-04 02:25:13
  * @FilePath: /XncutUI/Src/XncutEditor/XncutProjectMonitor/XncutProjectMonitorWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
 
 #include "XncutProjectMonitorWidget.h"
+#include <QToolBar>
 #include <QEvent>
 
 XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
@@ -15,7 +16,7 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
 {
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QVBoxLayout();
+    QVBoxLayout *MainLayout = new QVBoxLayout();
 
     /* 标题标签 */
     M_TitleLabel = new QLabel();
@@ -29,18 +30,12 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_MaxDurationLabel = new QLabel();    /* 显示最大持续时长 */
 
     /* 监视器底部菜单 */
-    M_MonitorMenuLayout = new QHBoxLayout();         /* 监视器菜单水平布局 */
-    M_AddDeleteMarkButton = new QPushButton();       /* 添加/删除标点 */
-    M_OutInMarkButton = new QPushButton();           /* 标记出/入点 */
-    M_GoToInPointButton = new QPushButton();         /* 转到入点 */
-    M_PreviousMoveFrameButton = new QPushButton();   /* 前移一帧 */
-    M_PausePlayButton = new QPushButton();           /* 暂停/播放 */
-    M_BackMoveFrameButton = new QPushButton();       /* 后移一帧 */
-    M_GoToOutPointButton = new QPushButton();        /* 转到出点 */
-    M_CaptureTheCurrFrameButton = new QPushButton(); /* 捕获当前帧 */
-    M_AdjustZoomComboBox = new QComboBox();          /* 调节缩放 */
-    M_AdjustAspectRatioComboBox = new QComboBox();   /* 调节宽高比 */
-    M_FullScreenButton = new QPushButton();          /* 全屏 */
+    QWidget *LeftSpacingWidget = new QWidget();  /* 左间隔部件, 无实际意义, 只是起到弹簧的作用 */
+    QWidget *RightSpacingWidget = new QWidget(); /* 右间隔部件 */
+    QToolBar *M_MonitorToolBar = new QToolBar("监视器工具");
+
+    M_AdjustZoomComboBox = new QComboBox();
+    M_AdjustAspectRatioComboBox = new QComboBox();
     /********************************************************************************************************/
 
     /* 设置属性 */
@@ -54,6 +49,7 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_TitleLabel->setText(R"(\     工程监视器     / づ)");
 
     /* 显示 */
+    M_VideoWidget->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum));
     M_VideoWidget->SetBannersContentFontSize(35);
     M_VideoWidget->SetBanners("加载摄像机数据(1/2)"); /* 横幅文本 */
 
@@ -72,15 +68,25 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_MaxDurationLabel->setFont(QFont("Arial", 13));
     M_MaxDurationLabel->setText("00:00:00.000");
 
-    /* 监视器底部菜单 */
-    InitButton(M_AddDeleteMarkButton, "添加/删除标点", 40, 40, QIcon("://Images/Editor/Monitor/Marker.svg"));
-    InitButton(M_OutInMarkButton, "标记出/入点", 40, 40, QIcon("://Images/Editor/Monitor/MarkerInOutPoint.png"));
-    InitButton(M_GoToInPointButton, "转到入点", 40, 40, QIcon("://Images/Editor/Monitor/GoInPoint.svg"));
-    InitButton(M_PreviousMoveFrameButton, "前移一帧", 40, 40, QIcon("://Images/Editor/Monitor/PrevFrame.svg"));
-    InitButton(M_PausePlayButton, "暂停/播放", 40, 40, QIcon("://Images/Editor/Monitor/Pause.svg"));
-    InitButton(M_BackMoveFrameButton, "后移一帧", 40, 40, QIcon("://Images/Editor/Monitor/NextFrame.svg"));
-    InitButton(M_GoToOutPointButton, "转到出点", 40, 40, QIcon("://Images/Editor/Monitor/GoOutPoint.svg"));
-    InitButton(M_CaptureTheCurrFrameButton, "捕获当前帧", 40, 40, QIcon("://Images/Editor/Monitor/Snapshot.svg"));
+    /* 监视器底部工具栏 */
+    LeftSpacingWidget->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum));
+    RightSpacingWidget->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Minimum));
+    M_MonitorToolBar->setSizePolicy(QSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed));
+    M_MonitorToolBar->setIconSize(QSize(30, 30)); /* 统一改变图标大小 */
+    M_MonitorToolBar->addWidget(LeftSpacingWidget);
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/Marker.svg"), "添加/删除标点");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/MarkerInOutPoint.png"), "标记出/入点");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/GoInPoint.svg"), "转到入点");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/PrevFrame.svg"), "前移一帧");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/Pause.svg"), "暂停 / 播放");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/NextFrame.svg"), "后移一帧");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/GoOutPoint.svg"), "转到出点");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/Snapshot.svg"), "捕获当前帧");
+    M_MonitorToolBar->addAction(QIcon("://Images/Editor/Monitor/FullScreen.png"), "全屏");
+    M_MonitorToolBar->addWidget(M_AdjustZoomComboBox);
+    M_MonitorToolBar->addWidget(M_AdjustAspectRatioComboBox);
+    M_MonitorToolBar->addWidget(RightSpacingWidget);
+
     /* 调节缩放 */
     M_AdjustZoomComboBox->installEventFilter(this);
     M_AdjustZoomComboBox->setFixedHeight(40);
@@ -95,6 +101,7 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_AdjustZoomComboBox->addItem("300%");
     M_AdjustZoomComboBox->addItem("400%");
     M_AdjustZoomComboBox->setCurrentText("100%");
+
     /* 调节宽高比 */
     M_AdjustAspectRatioComboBox->installEventFilter(this);
     M_AdjustAspectRatioComboBox->setFixedHeight(40);
@@ -106,8 +113,6 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_AdjustAspectRatioComboBox->addItem("3:4");
     M_AdjustAspectRatioComboBox->addItem("21:9");
     M_AdjustAspectRatioComboBox->setCurrentText("16:9");
-    /* 全屏 */
-    InitButton(M_FullScreenButton, "全屏", 40, 40, QIcon("://Images/Editor/Monitor/FullScreen.png"));
     /********************************************************************************************************/
 
     /* 设置布局 */
@@ -118,32 +123,16 @@ XncutProjectMonitorWidget::XncutProjectMonitorWidget(QWidget *Parent)
     M_DurationLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Maximum));
     M_DurationLayout->addWidget(M_MaxDurationLabel);
 
-    /* 底部菜单布局 */
-    M_MonitorMenuLayout->setContentsMargins(0, 0, 0, 0);
-    M_MonitorMenuLayout->setSpacing(3);
-    M_MonitorMenuLayout->addWidget(M_AddDeleteMarkButton);
-    M_MonitorMenuLayout->addWidget(M_OutInMarkButton);
-    M_MonitorMenuLayout->addWidget(M_GoToInPointButton);
-    M_MonitorMenuLayout->addWidget(M_PreviousMoveFrameButton);
-    M_MonitorMenuLayout->addWidget(M_PausePlayButton);
-    M_MonitorMenuLayout->addWidget(M_BackMoveFrameButton);
-    M_MonitorMenuLayout->addWidget(M_GoToOutPointButton);
-    M_MonitorMenuLayout->addWidget(M_CaptureTheCurrFrameButton);
-    M_MonitorMenuLayout->addSpacerItem(new QSpacerItem(0, 0, QSizePolicy::MinimumExpanding, QSizePolicy::Maximum));
-    M_MonitorMenuLayout->addWidget(M_AdjustZoomComboBox);
-    M_MonitorMenuLayout->addWidget(M_AdjustAspectRatioComboBox);
-    M_MonitorMenuLayout->addWidget(M_FullScreenButton);
-
     /* 主布局 */
-    M_MainLayout->setContentsMargins(3, 3, 3, 3);
-    M_MainLayout->setSpacing(3);
-    M_MainLayout->addWidget(M_TitleLabel);
-    M_MainLayout->addWidget(M_VideoWidget);
-    M_MainLayout->addLayout(M_DurationLayout);
-    M_MainLayout->addLayout(M_MonitorMenuLayout);
+    MainLayout->setContentsMargins(3, 3, 3, 3);
+    MainLayout->setSpacing(3);
+    MainLayout->addWidget(M_TitleLabel);
+    MainLayout->addWidget(M_VideoWidget);
+    MainLayout->addLayout(M_DurationLayout);
+    MainLayout->addWidget(M_MonitorToolBar);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 }
 
@@ -151,29 +140,14 @@ XncutProjectMonitorWidget::~XncutProjectMonitorWidget()
 {
 }
 
-void XncutProjectMonitorWidget::InitButton(QPushButton *Button, QString ButtonToolTip, int ButtonSize, int ButtonIconSize, QIcon ButtonIcon)
-{
-    /* 判空 */
-    if (!Button)
-    {
-        return;
-    }
-
-    /* 设置参数 */
-    Button->setToolTip(ButtonToolTip);
-    Button->setFixedSize(QSize(ButtonSize, ButtonSize));
-    Button->setIconSize(QSize(ButtonIconSize, ButtonIconSize));
-    Button->setIcon(ButtonIcon);
-}
-
 bool XncutProjectMonitorWidget::eventFilter(QObject *Watched, QEvent *Event)
 {
-    /* 拦截掉滚轮 */
-    if ((Watched == M_AdjustZoomComboBox || Watched == M_AdjustAspectRatioComboBox) && Event->type() == QEvent::Wheel)
-    {
-        Event->ignore();
-        return true;
-    }
+    // /* 拦截掉滚轮 */
+    // if ((Watched == M_AdjustZoomComboBox || Watched == M_AdjustAspectRatioComboBox) && Event->type() == QEvent::Wheel)
+    // {
+    //     Event->ignore();
+    //     return true;
+    // }
 
     /* 继续 */
     return QWidget::eventFilter(Watched, Event);

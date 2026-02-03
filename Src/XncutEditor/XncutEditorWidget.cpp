@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:18:46
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 02:41:21
+ * @LastEditTime: 2026-02-04 02:41:39
  * @FilePath: /XncutUI/Src/XncutEditor/XncutEditorWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -14,7 +14,7 @@ XncutEditorWidget::XncutEditorWidget(QWidget *Parent)
 {
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QGridLayout();
+    QGridLayout *MainLayout = new QGridLayout();
     M_MainSplitter = new QSplitter(Qt::Vertical);
 
     /* 标题 */
@@ -28,9 +28,6 @@ XncutEditorWidget::XncutEditorWidget(QWidget *Parent)
     M_BinsWidget = new XncutBinsWidget();                     /* 素材箱 */
     M_ProjectMonitorWidget = new XncutProjectMonitorWidget(); /* 监视器 */
     M_InspectorWidget = new XncutInspectorWidget();           /* 检查器 */
-
-    /* 底部提示 */
-    M_BottomTipsLabel = new QLabel("这是啥?这是啥?这是啥?这是啥?这是啥?这是啥?");
     /********************************************************************************************************/
 
     /* 设置属性 */
@@ -52,25 +49,31 @@ XncutEditorWidget::XncutEditorWidget(QWidget *Parent)
     /* 素材箱 */
     M_BinsWidget->setMovable(true);      /* 标签可移动 */
     M_BinsWidget->setMinimumHeight(350); /* 素材箱 */
+    M_BinsWidget->setStatusTip("多功能的小箱子~");
+
+    /* 监视器 */
+    M_ProjectMonitorWidget->setStatusTip("监视器~");
+
+    /* 检查器 */
+    M_InspectorWidget->setStatusTip("检查器~");
 
     /* 底部提示 */
     /********************************************************************************************************/
 
     /* 设置布局 */
     /* 主布局 */
-    M_MainLayout->setContentsMargins(0, 0, 0, 0);
-    M_MainLayout->setSpacing(3);
-    M_MainLayout->addLayout(M_TitleBarWidget, 0, 0, Qt::AlignTop);
-    M_MainLayout->addWidget(M_MainSplitter, 1, 0);
-    M_MainLayout->addWidget(M_BottomTipsLabel, 2, 0, Qt::AlignBottom);
+    MainLayout->setContentsMargins(0, 0, 0, 0);
+    MainLayout->setSpacing(3);
+    MainLayout->addWidget(M_TitleBarWidget, 0, 0, Qt::AlignTop);
+    MainLayout->addWidget(M_MainSplitter, 1, 0);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 
     /* 连接信号槽 */
     /* 顶部标题栏 */
-    connect(M_TitleBarWidget->M_ReturnButton, &QPushButton::clicked, this, &XncutEditorWidget::ReturnButtonClicked);
+    connect(M_TitleBarWidget->M_ReturnAction, &QAction::triggered, this, &XncutEditorWidget::ReturnButtonClicked);
     /********************************************************************************************************/
 }
 

@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-08-15 02:37:43
  * @LastEditors: xixi_
- * @LastEditTime: 2025-08-15 02:38:25
+ * @LastEditTime: 2026-02-04 02:33:32
  * @FilePath: /XncutUI/Src/XncutEditor/XncutInspector/XncutInspectorWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -16,6 +16,11 @@
 #include "XncutProjectArgWidget.h"
 #include <QScrollArea>
 
+/**
+ * @brief 检查器部件
+ * @note 早期很简单, 后来发现存在一些问题, 后续考虑使用`视图模型`架构去改进
+ * TODO: M/V架构优化
+ **/
 class XncutInspectorWidget : public QWidget
 {
     Q_OBJECT

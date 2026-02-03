@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:45:47
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:50:37
+ * @LastEditTime: 2026-02-04 02:29:49
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectCreateWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -15,7 +15,7 @@ XncutProjectCreateWidget::XncutProjectCreateWidget(QWidget *Parent)
 {
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QGridLayout(); /* 网格布局 */
+    QGridLayout *MainLayout = new QGridLayout(); /* 网格布局 */
 
     /* 基础设置 */
     M_BaseFormGroupBox = new QGroupBox();    /* 基础设置组盒子 */
@@ -33,15 +33,15 @@ XncutProjectCreateWidget::XncutProjectCreateWidget(QWidget *Parent)
     M_FrameRateComboBox = new QComboBox();         /* 帧率组合框 */
 
     /* 高级设置 */
-    M_AdvancedFormGroupBox = new QGroupBox();          /* 高级设置组盒子 */
-    M_AdvancedFormLayout = new QFormLayout();          /* 表单布局 */
-    M_CachePathLineEdit = new QLineEdit();             /* 工程缓存路径行文本编辑器 */
-    M_ColorSpaceComboBox = new QComboBox();            /* 色彩空间组合框 */
-    M_ProxyClipCheckBox = new QCheckBox(); /* 代理剪辑滑动开关 */
-    M_CopyClipCheckBox = new QCheckBox();  /* 复制剪辑滑动开关 */
-    M_AutoSaveLayout = new QHBoxLayout();              /* 自动保存布局 */
-    M_AutoSaveCheckBox= new QCheckBox();  /* 自动保存滑动开关 */
-    M_IntervalLineEdit = new QLineEdit();              /* 自动保存秒数行编辑框 */
+    M_AdvancedFormGroupBox = new QGroupBox(); /* 高级设置组盒子 */
+    M_AdvancedFormLayout = new QFormLayout(); /* 表单布局 */
+    M_CachePathLineEdit = new QLineEdit();    /* 工程缓存路径行文本编辑器 */
+    M_ColorSpaceComboBox = new QComboBox();   /* 色彩空间组合框 */
+    M_ProxyClipCheckBox = new QCheckBox();    /* 代理剪辑滑动开关 */
+    M_CopyClipCheckBox = new QCheckBox();     /* 复制剪辑滑动开关 */
+    M_AutoSaveLayout = new QHBoxLayout();     /* 自动保存布局 */
+    M_AutoSaveCheckBox = new QCheckBox();     /* 自动保存滑动开关 */
+    M_IntervalLineEdit = new QLineEdit();     /* 自动保存秒数行编辑框 */
 
     /* 创建工程 */
     M_CreateProjectLayout = new QVBoxLayout();
@@ -141,17 +141,17 @@ XncutProjectCreateWidget::XncutProjectCreateWidget(QWidget *Parent)
     M_CreateProjectLayout->addWidget(M_CreateProjectButton);
 
     /* 主布局 */
-    M_MainLayout->setRowStretch(0, 1);
-    M_MainLayout->setRowStretch(1, 1);
-    M_MainLayout->setColumnStretch(0, 2);
-    M_MainLayout->setColumnStretch(1, 2);
-    M_MainLayout->setSpacing(8);
-    M_MainLayout->addWidget(M_BaseFormGroupBox, 0, 0);
-    M_MainLayout->addWidget(M_ProjectConfigFormGroupBox, 0, 1);
-    M_MainLayout->addWidget(M_AdvancedFormGroupBox, 1, 0);
-    M_MainLayout->addLayout(M_CreateProjectLayout, 1, 1, Qt::AlignRight);
+    MainLayout->setRowStretch(0, 1);
+    MainLayout->setRowStretch(1, 1);
+    MainLayout->setColumnStretch(0, 2);
+    MainLayout->setColumnStretch(1, 2);
+    MainLayout->setSpacing(8);
+    MainLayout->addWidget(M_BaseFormGroupBox, 0, 0);
+    MainLayout->addWidget(M_ProjectConfigFormGroupBox, 0, 1);
+    MainLayout->addWidget(M_AdvancedFormGroupBox, 1, 0);
+    MainLayout->addLayout(M_CreateProjectLayout, 1, 1, Qt::AlignRight);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 }

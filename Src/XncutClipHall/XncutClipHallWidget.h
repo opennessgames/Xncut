@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:24:17
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:55:00
+ * @LastEditTime: 2026-02-04 03:01:56
  * @FilePath: /XncutUI/Src/XncutClipHall/XncutClipHallWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -21,6 +21,7 @@
 #include <QComboBox>
 #include "../XncutPublicWidget/XncutListView.h"
 
+class QToolBar;
 class XncutClipHallWidget : public QWidget
 {
     Q_OBJECT
@@ -36,8 +37,6 @@ private:
     void InitClipHallRight();
     /********************************************************************************************************/
 
-    /* 初始化底部菜单按钮 */
-    void InitBottomMenuButton(QPushButton *Button, int ButtonIconSize, QIcon ButtonIcon);
     /********************************************************************************************************/
 
 private slots:
@@ -59,10 +58,6 @@ signals:
     /********************************************************************************************************/
 
 private:
-    /* 主布局 */
-    QHBoxLayout *M_MainLayout = NULL; /* 水平布局 */
-    /********************************************************************************************************/
-
     /* 大厅左侧 */
     QWidget *M_LeftWidget = NULL;     /* 左侧部件 */
     QVBoxLayout *M_LeftLayout = NULL; /* 垂直布局 */
@@ -82,10 +77,13 @@ private:
     /* 大厅右侧 */
     QVBoxLayout *M_RightLayout = NULL; /* 网格布局 */
 
+    /**
+     * TODO: 工程管理单独封装
+     **/
+
     /* 最近工程区域 */
     /* 搜索工程 */
-    QHBoxLayout *M_SearchLayout = NULL;          /* 水平布局 */
-    QLabel *M_TitleTextLabel = NULL;             /* 最近工程(标题)文案 */
+    QToolBar *M_SearchToolBar = NULL;            /* 搜索过滤工具栏 */
     QLineEdit *M_SearchLineEdit = NULL;          /* 行搜索框 */
     QPushButton *M_ClearSearchButton = NULL;     /* 清除搜索 */
     QComboBox *M_SearchByComboBox = NULL;        /* 搜索依据 */
@@ -95,14 +93,14 @@ private:
     XncutListView *M_RecentProjectListView = NULL;
 
     /* 底部菜单 */
-    QHBoxLayout *M_BottomMenuLayout = NULL;       /* 底部菜单布局 */
-    QLabel *M_BottomMenuTipsLabel = NULL;         /* 提示 */
-    QPushButton *M_ScreenRecordingButton = NULL;  /* 录屏按钮 */
-    QPushButton *M_DataVideoButton = NULL;        /* 数据视频按钮 */
-    QPushButton *M_TemplateButton = NULL;         /* 模板按钮 */
-    QPushButton *M_CommunityButton = NULL;        /* 社区按钮 */
-    QPushButton *M_SetUpButton = NULL;            /* 设置按钮 */
-    QPushButton *M_LocalAreaNetCollButton = NULL; /* 局域互协按钮 */
+    QToolBar *M_RecoFuncToolBar = NULL; /* 推荐功能工具栏 */
+    // QLabel *M_BottomMenuTipsLabel = NULL;         /* 提示 */
+    // QPushButton *M_ScreenRecordingButton = NULL;  /* 录屏按钮 */
+    // QPushButton *M_DataVideoButton = NULL;        /* 数据视频按钮 */
+    // QPushButton *M_TemplateButton = NULL;         /* 模板按钮 */
+    // QPushButton *M_CommunityButton = NULL;        /* 社区按钮 */
+    // QPushButton *M_SetUpButton = NULL;            /* 设置按钮 */
+    // QPushButton *M_LocalAreaNetCollButton = NULL; /* 局域互协按钮 */
     /********************************************************************************************************/
 };
 

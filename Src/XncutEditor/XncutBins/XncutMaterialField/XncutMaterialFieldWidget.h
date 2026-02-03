@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:51:09
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:51:33
+ * @LastEditTime: 2026-02-04 02:28:28
  * @FilePath: /XncutUI/Src/XncutEditor/XncutBins/XncutMaterialField/XncutMaterialFieldWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -36,10 +36,6 @@ protected:
 signals:
 
 private:
-    /* 主布局 */
-    QGridLayout *M_MainLayout = NULL;
-    /********************************************************************************************************/
-
     /* 素材类型标签 */
     QTabBar *M_MaterialTypeTabBar = NULL;
     /********************************************************************************************************/

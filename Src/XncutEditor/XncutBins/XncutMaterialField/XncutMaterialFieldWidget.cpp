@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 18:51:23
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 18:51:29
+ * @LastEditTime: 2026-02-04 02:28:38
  * @FilePath: /XncutUI/Src/XncutEditor/XncutBins/XncutMaterialField/XncutMaterialFieldWidget.cpp
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -14,7 +14,7 @@ XncutMaterialFieldWidget::XncutMaterialFieldWidget(QWidget *Parent)
 {
     /* 初始化 */
     /* 主布局 */
-    M_MainLayout = new QGridLayout();
+    QGridLayout *MainLayout = new QGridLayout();
 
     /* 素材类型标签 */
     M_MaterialTypeTabBar = new QTabBar();
@@ -66,15 +66,15 @@ XncutMaterialFieldWidget::XncutMaterialFieldWidget(QWidget *Parent)
 
     /* 设置布局 */
     /* 主布局 */
-    M_MainLayout->addWidget(M_MaterialTypeTabBar, 0, 0, 4, 1);
-    M_MainLayout->addWidget(M_SearchLineEdit, 0, 1, 1, 1);
-    M_MainLayout->addWidget(M_ClearSearchButton, 0, 2, 1, 1);
-    M_MainLayout->addWidget(M_ImportTimeComboBox, 0, 3, 1, 1);
-    M_MainLayout->addWidget(M_ViewModeComboBox, 0, 4, 1, 1);
-    M_MainLayout->addWidget(M_MaterialView, 1, 1, 3, 4);
+    MainLayout->addWidget(M_MaterialTypeTabBar, 0, 0, 4, 1);
+    MainLayout->addWidget(M_SearchLineEdit, 0, 1, 1, 1);
+    MainLayout->addWidget(M_ClearSearchButton, 0, 2, 1, 1);
+    MainLayout->addWidget(M_ImportTimeComboBox, 0, 3, 1, 1);
+    MainLayout->addWidget(M_ViewModeComboBox, 0, 4, 1, 1);
+    MainLayout->addWidget(M_MaterialView, 1, 1, 3, 4);
     /********************************************************************************************************/
 
-    setLayout(M_MainLayout);
+    setLayout(MainLayout);
     /********************************************************************************************************/
 }
 

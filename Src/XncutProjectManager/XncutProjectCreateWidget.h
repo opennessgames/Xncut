@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-14 17:44:01
  * @LastEditors: xixi_
- * @LastEditTime: 2025-07-14 17:50:53
+ * @LastEditTime: 2026-02-04 02:29:40
  * @FilePath: /XncutUI/Src/XncutProjectManager/XncutProjectCreateWidget.h
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
  */
@@ -31,10 +31,6 @@ private slots:
 protected:
 signals:
 private:
-    /* 主布局 */
-    QGridLayout *M_MainLayout = NULL; /* 网格布局 */
-    /********************************************************************************************************/
-
     /* 基础设置 */
     QGroupBox *M_BaseFormGroupBox = NULL;    /* 基础设置组盒子 */
     QFormLayout *M_BaseFormLayout = NULL;    /* 表单布局 */
