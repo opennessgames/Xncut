@@ -2,18 +2,23 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2025-10-31 22:27:09
+ * @LastEditTime: 2026-02-04 01:24:37
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
 
 # **熙柠剪辑UI**
 > BY: 雷电法王杨永信(在B站名字)<br/>
-> 熙柠剪辑于**2022年4月**左右首次立项(最初为**熙柠云剪**) <br/>
-> UI版于2025-07-14 16:54:37立项 <br/>
-> 此版本为UI, 没有业务逻辑,UI是纯代码布局, 你也可以学习如何使用代码来布局<br/>
-> 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源 <br/>
-> 后续我会`push`一些测试的例子, 位于`Test`目录下
+
+# 项目历史: 
+> 熙柠剪辑于**2022年4月**左右首次立项(由熙柠游戏网站衍生出来, 最初为**熙柠云剪**, 运行在Web上) <br/>
+> Unity引擎版本创建于2023年8月20日, 早期工程文件已封存, 不上传到GitHub。 <br/>
+> UE引擎版本创建于2023年11月4日, 意外丢失。 <br/>
+> QT版本创建于2023年11月30日, 现存, 很早期的C++入门项目。 <br/>
+> QT纯UI版于2025-07-14 16:54:37立项。<br/>
+> 此版本为UI, 没有业务逻辑,UI是纯代码布局, 你也可以学习如何使用代码来布局。<br/>
+> 请注意: 业务逻辑的实现非常不稳定! 暂时只开源UI, 业务逻辑稳下来后再开源。 <br/>
+> 后续我会`push`一些测试的例子, 位于`Test`目录下。
 
 # 重要消息:
 1. 目前还在实现一些底层所需要的, 包括一些些小框架, 所以这个仓库将会很长一段时间不更新, 希望您知道
@@ -97,6 +102,7 @@ git clone https://github.com/opennessgames/Xncut
 3. **设置**
 
 # 项目文件(夹)结构
+> 你务必知道: 不同的模块有着不同的协议, 以MIT居多
 - 根目录
   - [DIR] Assets **资源目录**
     - [DIR] Images **图片**
@@ -151,7 +157,7 @@ git clone https://github.com/opennessgames/Xncut
   - [DIR] Test **测试例子**
     - [DIR] XncutThreeLayerLayout **三层垂直布局部件**
     - [DIR] XncutAbstractTabItemView **抽象标签视图部件**
-    - [DIR] XncutTitleBar **标题栏**
+    - [DIR] XncutTitleBar **标题栏**  **MIT协议**
     - [DIR] XncutPenTool **钢笔工具**
   - [DIR] Data **一些配置**
   - [DIR] Doc **开发文档**
