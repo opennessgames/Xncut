@@ -16,7 +16,7 @@ qt_standard_project_setup()
 
 qt_add_executable(Xncut
     WIN32 MACOSX_BUNDLE
-    main.cpp
+    XncutMain.cpp
     Xncut.cpp
     Xncut.h
 )
