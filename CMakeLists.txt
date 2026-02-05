@@ -1,3 +1,12 @@
+#
+# @Author: xixi_
+# @Date: 2026-02-05 23:45:14
+# @LastEditors: xixi_
+# @LastEditTime: 2026-02-05 23:47:41
+# @FilePath: /Xncut/CMakeLists.txt
+# Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
+#
+
 cmake_minimum_required(VERSION 3.19)
 project(Xncut LANGUAGES CXX)
 
@@ -14,14 +23,14 @@ qt_add_executable(Xncut
 
 target_link_libraries(Xncut
     PRIVATE
-        Qt::Core
-        Qt::Widgets
+    Qt::Core
+    Qt::Widgets
 )
 
 include(GNUInstallDirs)
 
 install(TARGETS Xncut
-    BUNDLE  DESTINATION .
+    BUNDLE DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
