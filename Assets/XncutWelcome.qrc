@@ -1,0 +1,15 @@
+<!--
+ * @Author: xixi_
+ * @Date: 2026-02-06 00:05:35
+ * @LastEditors: xixi_
+ * @LastEditTime: 2026-02-06 00:05:50
+ * @FilePath: /Xncut/Assets/XncutWelcome.html
+ * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
+-->
+
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file>Images/Welcome/StartBg.png</file>
+  </qresource>
+</RCC>

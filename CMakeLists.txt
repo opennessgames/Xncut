@@ -10,15 +10,28 @@
 cmake_minimum_required(VERSION 3.19)
 project(Xncut LANGUAGES CXX)
 
+set(CMAKE_AUTOUIC OFF) # 禁止设计师
+set(CMAKE_AUTOMOC ON) # 启用MOC
+set(CMAKE_AUTORCC ON) # 启用RCC
+
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
 qt_standard_project_setup()
 
+# 资源文件
+qt_add_resources(RESOURCES_SOURCES
+    Assets/XncutIcons.qrc
+    Assets/XncutWelcome.qrc
+)
+# 可执行文件
 qt_add_executable(Xncut
     WIN32 MACOSX_BUNDLE
-    XncutMain.cpp
-    Xncut.cpp
-    Xncut.h
+    ${RESOURCES_SOURCES}
+    Xncut/XncutMain.cpp
+    Xncut/Xncut.cpp
+    Xncut/Xncut.h
+    Xncut/XncutWelcome/XncutWelcomeScreen.h
+    Xncut/XncutWelcome/XncutWelcomeScreen.cpp
 )
 
 target_link_libraries(Xncut
