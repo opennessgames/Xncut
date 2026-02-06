@@ -2,7 +2,23 @@
  * @Author: xixi_
  * @Date: 2026-02-06 14:28:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-06 14:28:41
+ * @LastEditTime: 2026-02-06 14:43:06
  * @FilePath: /Xncut/XncutCores/XncutCore/XncutGlobalConfig.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
+
+#include "XncutGlobalConfig.h"
+
+XncutGlobalConfig &XncutGlobalConfig::GetGlobalInstance()
+{
+    static XncutGlobalConfig Instance;
+    return Instance;
+}
+
+XncutGlobalConfig::XncutGlobalConfig()
+{
+}
+
+XncutGlobalConfig::~XncutGlobalConfig()
+{
+}
