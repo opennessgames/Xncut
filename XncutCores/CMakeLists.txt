@@ -13,5 +13,9 @@ project(XncutCores VERSION 0.0.1 DESCRIPTION "核心" LANGUAGES CXX)
 # XncutCore
 add_subdirectory(XncutCore)
 
+# XncutWidgets
+add_subdirectory(XncutWidgets)
+
 # 指定库的包含目录
 target_include_directories(XncutCore PUBLIC XncutCore)
+target_include_directories(XncutCore PUBLIC XncutWidgets)
