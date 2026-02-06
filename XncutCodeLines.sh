@@ -3,7 +3,7 @@
 # @Author: xixi_
 # @Date: 2026-02-06 11:44:08
  # @LastEditors: xixi_
- # @LastEditTime: 2026-02-06 16:00:44
+ # @LastEditTime: 2026-02-06 16:04:27
  # @FilePath: /Xncut/XncutCodeLines.sh
 # Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 ###
@@ -14,7 +14,7 @@ FileTypes=("*.cpp" "*.h" "*.c" "*.S" "*.lua")
 # 需要统计的源代码目录
 Directories=(
     "Xncut"          # 熙柠剪辑宿主程序
-    "XncutCore"      # 熙柠剪辑核心库
+    "XncutCores"      # 熙柠剪辑核心库
     "XncutMilkshake" # 熙柠剪辑渲染引擎
     "XncutPlugins"   # 熙柠剪辑插件
 )
