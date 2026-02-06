@@ -1,9 +1,10 @@
+#!/bin/bash
 ###
 # @Author: xixi_
 # @Date: 2026-02-06 11:44:08
-# @LastEditors: xixi_
-# @LastEditTime: 2026-02-06 11:44:10
-# @FilePath: /Xncut/XncutCodeLines.sh
+ # @LastEditors: xixi_
+ # @LastEditTime: 2026-02-06 16:00:44
+ # @FilePath: /Xncut/XncutCodeLines.sh
 # Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 ###
 
