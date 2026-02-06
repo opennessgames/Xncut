@@ -23,6 +23,8 @@ qt_add_resources(RESOURCES_SOURCES
     Assets/XncutIcons.qrc
     Assets/XncutWelcome.qrc
 )
+# XncutCore
+add_subdirectory(XncutCores)
 # 可执行文件
 qt_add_executable(Xncut
     WIN32 MACOSX_BUNDLE
@@ -40,6 +42,7 @@ target_link_libraries(Xncut
     PRIVATE
     Qt::Core
     Qt::Widgets
+    XncutCore
 )
 
 include(GNUInstallDirs)
