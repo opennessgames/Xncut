@@ -41,6 +41,8 @@ qt_add_executable(Xncut
     Xncut/XncutWelcome/XncutWelcomeScreen.cpp
     Xncut/XncutWelcome/XncutBootloader.h
     Xncut/XncutWelcome/XncutBootloader.cpp
+    Xncut/XncutPlugin/XncutPluginManager.h
+    Xncut/XncutPlugin/XncutPluginManager.cpp
 )
 
 target_link_libraries(Xncut
