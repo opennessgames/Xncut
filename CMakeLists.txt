@@ -43,6 +43,8 @@ qt_add_executable(Xncut
     Xncut/XncutWelcome/XncutBootloader.cpp
     Xncut/XncutPlugin/XncutPluginManager.h
     Xncut/XncutPlugin/XncutPluginManager.cpp
+    Xncut/XncutClipHall/XncutClipHallWidget.h
+    Xncut/XncutClipHall/XncutClipHallWidget.cpp
 )
 
 target_link_libraries(Xncut
