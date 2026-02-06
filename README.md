@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-04 03:07:45
+ * @LastEditTime: 2026-02-07 01:52:51
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -107,6 +107,8 @@ git clone https://github.com/opennessgames/Xncut
 # 项目文件(夹)结构
 > 你务必知道: 不同的模块有着不同的协议, 以MIT居多
 - 根目录
+  - [DIR] Doc
+    - [DIR] RoutingArchitecture **页面路由架构**
   - [DIR] Assets **资源目录**
     - [DIR] Images **图片**
       - [DIR] ClipHall **剪辑大厅**
