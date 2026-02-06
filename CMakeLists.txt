@@ -8,7 +8,7 @@
 #
 
 cmake_minimum_required(VERSION 3.19)
-project(Xncut LANGUAGES CXX)
+project(Xncut VERSION 0.0.1 DESCRIPTION "NEL剪辑软件" LANGUAGES CXX)
 
 set(CMAKE_AUTOUIC OFF) # 禁止设计师
 set(CMAKE_AUTOMOC ON) # 启用MOC
