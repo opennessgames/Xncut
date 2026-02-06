@@ -14,6 +14,8 @@ project(XncutCore VERSION 0.0.1 DESCRIPTION "核心" LANGUAGES CXX)
 add_library(XncutCore SHARED
     XncutGlobalConfig.h
     XncutGlobalConfig.cpp
+    XncutPluginFramework/XncutAbstractPlugin.h
+    XncutPluginFramework/XncutAbstractPlugin.cpp
 )
 
 # 链接库
