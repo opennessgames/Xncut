@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-02-05 23:45:14
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-06 11:46:55
+ * @LastEditTime: 2026-02-09 00:57:53
  * @FilePath: /Xncut/Xncut/XncutMain.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
@@ -29,6 +29,10 @@ int main(int argc, char **argv)
     /********************************************************************************************************/
 
     /* 欢迎界面 */
+    QFont WelcomeScreenFont;
+    WelcomeScreenFont.setPixelSize(20);
+    WelcomeScreenFont.setBold(true);
+    WelcomeScreen.setFont(WelcomeScreenFont);
     WelcomeScreen.setFixedSize(QSize(900, 444));
     WelcomeScreen.setPixmap(QPixmap("://Images/Welcome/StartBg.png").scaled(WelcomeScreen.size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
     WelcomeScreen.show();
