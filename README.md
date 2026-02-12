@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-01-27 14:56:00
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-09 15:15:13
+ * @LastEditTime: 2026-02-12 15:50:54
  * @FilePath: /Xncut-Design/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -18,7 +18,8 @@
 # 编写的全程不使用任何AI
 - 目录 
   - [为什么使用C/C++](Md/1.WhyUseCorC++.md)
+  - [补档:技术选型](Md/1.1.TechnologySelection.md)
   - [原理概述](Md/2.OverviewPrinciples.md)
   - [数据混合](Md/3.DataMixed.md)
 
-啊, 后续再更新吧
+啊, 后续再更新吧, 新的一年啦, "码"到成功
