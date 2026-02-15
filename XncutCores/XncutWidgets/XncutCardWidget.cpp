@@ -1,9 +1,9 @@
 /*
  * @Author: xixi_
- * @Date: 2026-02-06 16:13:53
+ * @Date: 2025-12-06 20:44:24
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-06 16:14:00
- * @FilePath: /Xncut/XncutCores/XncutWidgets/XncutCardListWidget.cpp
+ * @LastEditTime: 2026-02-15 13:34:53
+ * @FilePath: /Xncut/XncutCores/XncutWidgets/XncutCardWidget.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
 
