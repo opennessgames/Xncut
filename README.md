@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-01-27 14:56:00
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-15 15:49:02
+ * @LastEditTime: 2026-02-15 19:25:33
  * @FilePath: /Xncut-Design/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -22,5 +22,6 @@
   - [原理概述](Md/2.OverviewPrinciples.md)
   - [数据混合](Md/3.DataMixed.md)
   - [坑](Md/4.Pit.md)
+  - [浅谈登录](Md/5.BriefDiscussionLogin.md)
 
 啊, 后续再更新吧, 新的一年啦, "码"到成功
