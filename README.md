@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-02-05 23:54:18
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-16 21:27:16
+ * @LastEditTime: 2026-02-16 21:30:29
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -20,6 +20,8 @@
   - [FILE] XncutWelcome.qrc **欢迎屏幕背景索引**
 - [DIR] Template **标准布局模板**
   - [FILE] XncutClassLayoutTemplate.h **类标准布局模板**
+- [DIR] Src **假源代码**
+  - [FILE] Main.c **假启动文件**
 - [DIR] Xncut **真源代码**
   - [DIR] XncutWelcome **欢迎**
     - [FILE] XncutWelcomeScreen.h **欢迎屏幕**
