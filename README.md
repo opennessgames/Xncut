@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-02-05 23:54:18
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-16 21:30:29
+ * @LastEditTime: 2026-02-16 22:43:50
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -16,6 +16,8 @@
       - [FILE] PubgXncut128x128.png **128x128规格图标**
     - [DIR] Welcome **欢迎屏幕背景**
       - [FILE] *.png
+  - [DIR] Fonts **字体**
+    - [FILE] GuiFont.ttf **界面默认字体** 
   - [FILE] XncutIcons.qrc **熙柠剪辑图标索引**
   - [FILE] XncutWelcome.qrc **欢迎屏幕背景索引**
 - [DIR] Template **标准布局模板**
