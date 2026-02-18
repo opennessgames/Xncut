@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-12-06 20:44:24
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-15 13:34:53
+ * @LastEditTime: 2026-02-18 21:53:21
  * @FilePath: /Xncut/XncutCores/XncutWidgets/XncutCardWidget.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
@@ -57,6 +57,12 @@ XncutCardWidget::~XncutCardWidget()
 void XncutCardWidget::SetImage(const QString &Path)
 {
     M_Pixmap = QPixmap(Path);
+    update();
+}
+
+void XncutCardWidget::SetSubText(const QString &Text)
+{
+    M_Subtext = Text;
     update();
 }
 
