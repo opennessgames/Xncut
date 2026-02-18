@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-02-06 14:28:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-06 15:51:30
+ * @LastEditTime: 2026-02-18 22:17:32
  * @FilePath: /Xncut/XncutCores/XncutCore/XncutGlobalConfig.h
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
@@ -57,5 +57,8 @@ public:
 
     /********************************************************************************************************/
 };
+
+/* 全局单例获取宏 */
+#define XGlobalConfig XncutGlobalConfig::GetGlobalInstance()
 
 #endif // XNCUT_GLOBAL_CONFIG_H
