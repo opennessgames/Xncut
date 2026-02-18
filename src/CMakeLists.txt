@@ -1,6 +1,15 @@
+#
+# @Author: xixi_
+# @Date: 2026-02-15 23:46:55
+# @LastEditors: xixi_
+# @LastEditTime: 2026-02-18 16:45:39
+# @FilePath: /shotcut/src/CMakeLists.txt
+# Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
+#
+
 find_package(Qt6 REQUIRED COMPONENTS Core)
 
-add_executable(shotcut WIN32 MACOSX_BUNDLE
+add_executable(Xncut WIN32 MACOSX_BUNDLE
   abstractproducerwidget.cpp abstractproducerwidget.h
   actions.cpp actions.h
   autosavefile.cpp autosavefile.h
@@ -266,7 +275,7 @@ add_custom_target(OTHER_FILES
   ../scripts/staple.sh
 )
 
-target_link_libraries(shotcut
+target_link_libraries(Xncut
   PRIVATE
   CuteLogger
   PkgConfig::mlt++
@@ -284,43 +293,43 @@ target_link_libraries(shotcut
   Qt6::Xml
 )
 if(UNIX AND NOT APPLE)
-  target_link_libraries(shotcut PRIVATE Qt6::DBus X11::X11)
+  target_link_libraries(Xncut PRIVATE Qt6::DBus X11::X11)
 endif()
 
-file(GLOB_RECURSE QML_SRC "qml/*")
-target_sources(shotcut PRIVATE ${QML_SRC})
+file(GLOB_RECURSE QML_SRC "qml/#")
+target_sources(Xncut PRIVATE ${QML_SRC})
 
-target_include_directories(shotcut PRIVATE ${CMAKE_SOURCE_DIR}/CuteLogger/include)
-target_compile_definitions(shotcut PRIVATE SHOTCUT_VERSION="${SHOTCUT_VERSION}")
+target_include_directories(Xncut PRIVATE ${CMAKE_SOURCE_DIR}/CuteLogger/include)
+target_compile_definitions(Xncut PRIVATE SHOTCUT_VERSION="${SHOTCUT_VERSION}")
 
 # Add compile definitions when certain custom cache variables are ON
 if(EXTERNAL_LAUNCHERS)
-  target_compile_definitions(shotcut PRIVATE EXTERNAL_LAUNCHERS)
+  target_compile_definitions(Xncut PRIVATE EXTERNAL_LAUNCHERS)
 endif()
 if(USE_VULKAN)
-  target_compile_definitions(shotcut PRIVATE USE_VULKAN)
+  target_compile_definitions(Xncut PRIVATE USE_VULKAN)
 endif()
 
 if(WIN32)
   # Windows resource
   string(REPLACE . , PRODUCT_VERSION ${PROJECT_VERSION})
   configure_file(${CMAKE_SOURCE_DIR}/packaging/windows/shotcut.rc.in ${CMAKE_SOURCE_DIR}/packaging/windows/shotcut.rc)
-  target_sources(shotcut PRIVATE ${CMAKE_SOURCE_DIR}/packaging/windows/shotcut.rc)
+  target_sources(Xncut PRIVATE ${CMAKE_SOURCE_DIR}/packaging/windows/shotcut.rc)
 
   # Windows integration features
   # These are not yet available in Qt 6. They plan to make a cross-platform API planned but not yet implemented.
-#  find_package(Qt 6.2 REQUIRED COMPONENTS WinExtras)
-#  target_sources(shotcut PRIVATE windowstools.cpp windowstools.h)
-#  target_link_libraries(shotcut PRIVATE Qt6::WinExtras)
-  target_sources(shotcut PRIVATE widgets/d3dvideowidget.h widgets/d3dvideowidget.cpp)
-  target_sources(shotcut PRIVATE widgets/openglvideowidget.h widgets/openglvideowidget.cpp)
-  target_link_libraries(shotcut PRIVATE d3d11 d3dcompiler)
+  #  find_package(Qt 6.2 REQUIRED COMPONENTS WinExtras)
+  #  target_sources(shotcut PRIVATE windowstools.cpp windowstools.h)
+  #  target_link_libraries(shotcut PRIVATE Qt6::WinExtras)
+  target_sources(Xncut PRIVATE widgets/d3dvideowidget.h widgets/d3dvideowidget.cpp)
+  target_sources(Xncut PRIVATE widgets/openglvideowidget.h widgets/openglvideowidget.cpp)
+  target_link_libraries(Xncut PRIVATE d3d11 d3dcompiler)
 
   # Runtime exception handler for debug only
   if(CMAKE_SYSTEM_PROCESSOR STREQUAL "AMD64")
-    target_include_directories(shotcut PRIVATE ${CMAKE_SOURCE_DIR}/drmingw/include)
-    target_link_directories(shotcut PRIVATE ${CMAKE_SOURCE_DIR}/drmingw/x64/lib)
-    target_link_libraries(shotcut PRIVATE debug exchndl)
+    target_include_directories(Xncut PRIVATE ${CMAKE_SOURCE_DIR}/drmingw/include)
+    target_link_directories(Xncut PRIVATE ${CMAKE_SOURCE_DIR}/drmingw/x64/lib)
+    target_link_libraries(Xncut PRIVATE debug exchndl)
   endif()
 
   if(WINDOWS_DEPLOY)
@@ -334,20 +343,20 @@ if(WIN32)
   install(DIRECTORY ${CMAKE_SOURCE_DIR}/filter-sets DESTINATION ${CMAKE_INSTALL_PREFIX}/share/shotcut/)
   install(DIRECTORY ${CMAKE_SOURCE_DIR}/voices DESTINATION ${CMAKE_INSTALL_PREFIX}/share/shotcut/)
 else()
-    target_sources(shotcut PRIVATE widgets/openglvideowidget.h widgets/openglvideowidget.cpp)
+  target_sources(Xncut PRIVATE widgets/openglvideowidget.h widgets/openglvideowidget.cpp)
 endif()
 
 if(APPLE)
-  target_sources(shotcut PRIVATE macos.mm macos.h
+  target_sources(Xncut PRIVATE macos.mm macos.h
     widgets/metalvideowidget.h widgets/metalvideowidget.mm)
   set_target_properties(shotcut PROPERTIES
-    OUTPUT_NAME "Shotcut"
+    OUTPUT_NAME "Xncut"
     MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/packaging/macos/Info.plist.in)
   find_library(FOUNDATION Foundation)
   find_library(COCOA Cocoa)
-  target_link_libraries(shotcut PRIVATE ${FOUNDATION} ${COCOA})
+  target_link_libraries(Xncut PRIVATE ${FOUNDATION} ${COCOA})
   set(APP_ICON ${CMAKE_SOURCE_DIR}/packaging/macos/shotcut.icns)
-  target_sources(shotcut PRIVATE ${APP_ICON})
+  target_sources(Xncut PRIVATE ${APP_ICON})
   set_source_files_properties(${APP_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
 
   # Create a symlink to the qml folder after building
@@ -371,12 +380,12 @@ if(UNIX AND NOT APPLE)
   file(CREATE_LINK ${CMAKE_SOURCE_DIR}/filter-sets ${CMAKE_BINARY_DIR}/share/shotcut/filter-sets SYMBOLIC)
   file(CREATE_LINK ${CMAKE_SOURCE_DIR}/voices ${CMAKE_BINARY_DIR}/share/shotcut/voices SYMBOLIC)
   include(GNUInstallDirs)
-  install(TARGETS shotcut RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+  install(TARGETS Xncut RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
   install(DIRECTORY qml DESTINATION ${CMAKE_INSTALL_DATADIR}/shotcut/)
   install(DIRECTORY ${CMAKE_SOURCE_DIR}/filter-sets DESTINATION ${CMAKE_INSTALL_DATADIR}/shotcut/)
   install(DIRECTORY ${CMAKE_SOURCE_DIR}/voices DESTINATION ${CMAKE_INSTALL_DATADIR}/shotcut/)
 
-  string(REPLACE . - SHOTCUT_DATE  ${SHOTCUT_VERSION})
+  string(REPLACE . - SHOTCUT_DATE ${SHOTCUT_VERSION})
   string(PREPEND SHOTCUT_DATE "20")
   configure_file(${CMAKE_SOURCE_DIR}/packaging/linux/org.shotcut.Shotcut.metainfo.xml.in
     ${CMAKE_BINARY_DIR}/packaging/linux/org.shotcut.Shotcut.metainfo.xml)
