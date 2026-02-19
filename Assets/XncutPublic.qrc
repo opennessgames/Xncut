@@ -1,0 +1,15 @@
+<!--
+ * @Author: xixi_
+ * @Date: 2026-02-19 15:26:13
+ * @LastEditors: xixi_
+ * @LastEditTime: 2026-02-19 15:26:28
+ * @FilePath: /Xncut/Assets/XncutPublic.html
+ * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
+-->
+
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file>Images/Public/ReturnHall.png</file>
+  </qresource>
+</RCC>

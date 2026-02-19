@@ -27,6 +27,7 @@ qt_standard_project_setup()
 qt_add_resources(RESOURCES_SOURCES
     Assets/XncutIcons.qrc
     Assets/XncutWelcome.qrc
+    Assets/XncutPublic.qrc
 )
 # XncutCore
 add_subdirectory(XncutCores)
