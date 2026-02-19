@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-02-05 23:54:18
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-16 22:43:50
+ * @LastEditTime: 2026-02-19 16:43:19
  * @FilePath: /Xncut/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -31,11 +31,11 @@
     - [FILE] XncutBootloader.h **后台加载线程**
     - [FILE] XncutBootloader.cpp
   - [DIR] XncutPlugin **插件系统**
-    - [DIR] XncutPluginManager.h **插件管理器**
-    - [DIR] XncutPluginManager.cpp
+    - [FILE] XncutPluginManager.h **插件管理器**
+    - [FILE] XncutPluginManager.cpp
   - [DIR] XncutClipHall **剪辑大厅**
-    - [DIR] XncutClipHallWidget.h **剪辑大厅部件**
-    - [DIR] XncutClipHallWidget.cpp
+    - [FILE] XncutClipHallWidget.h **剪辑大厅部件**
+    - [FILE] XncutClipHallWidget.cpp
     - [FILE] XncutClipHallInfoWidget.h **剪辑大厅信息部件**
     - [FILE] XncutClipHallInfoWidget.cpp
   - [FILE] Xncut.h **主窗口**
