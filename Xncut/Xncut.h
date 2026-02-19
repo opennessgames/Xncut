@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2023-9-28 12:35:46
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-15 13:47:09
+ * @LastEditTime: 2026-02-19 15:36:23
  * @FilePath: /Xncut/Xncut/Xncut.h
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
@@ -12,6 +12,8 @@
 
 #include <QMainWindow>
 
+class QLabel;
+class QToolBar;
 class Xncut : public QMainWindow
 {
     Q_OBJECT
@@ -59,6 +61,9 @@ signals:
     /********************************************************************************************************/
 
 private:
+    QLabel *M_CurrTitleLabel = NULL;        /* 当前标题标签 */
+    QToolBar *M_ContainerToolbar = NULL;    /* 容器工具栏 */
+    QAction *M_ReturnClipHallAction = NULL; /* 返回大厅动作 */
     /********************************************************************************************************/
 
     /********************************************************************************************************/
