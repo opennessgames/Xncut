@@ -36,6 +36,8 @@
   - [DIR] XncutClipHall **剪辑大厅**
     - [DIR] XncutClipHallWidget.h **剪辑大厅部件**
     - [DIR] XncutClipHallWidget.cpp
+    - [FILE] XncutClipHallInfoWidget.h **剪辑大厅信息部件**
+    - [FILE] XncutClipHallInfoWidget.cpp
   - [FILE] Xncut.h **主窗口**
   - [FILE] Xncut.cpp
   - [FILE] XncutMain.cpp **启动文件**
