@@ -1,8 +1,8 @@
 /*
  * @Author: xixi_
- * @Date: 2026-02-06 16:06:41
+ * @Date: 2025-04-21 20:10:34
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-19 16:34:03
+ * @LastEditTime: 2026-02-19 16:36:58
  * @FilePath: /Xncut/Xncut/XncutClipHall/XncutClipHallWidget.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
