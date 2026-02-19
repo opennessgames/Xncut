@@ -28,6 +28,7 @@ qt_add_resources(RESOURCES_SOURCES
     Assets/XncutIcons.qrc
     Assets/XncutWelcome.qrc
     Assets/XncutPublic.qrc
+    Assets/XncutClipHall.qrc
 )
 # XncutCore
 add_subdirectory(XncutCores)
@@ -46,6 +47,8 @@ qt_add_executable(Xncut
     Xncut/XncutPlugin/XncutPluginManager.cpp
     Xncut/XncutClipHall/XncutClipHallWidget.h
     Xncut/XncutClipHall/XncutClipHallWidget.cpp
+    Xncut/XncutClipHall/XncutClipHallInfoWidget.h
+    Xncut/XncutClipHall/XncutClipHallInfoWidget.cpp
 )
 
 target_link_libraries(Xncut
@@ -53,6 +56,7 @@ target_link_libraries(Xncut
     Qt::Core
     Qt::Widgets
     XncutCore
+    XncutWidgets
 )
 
 include(GNUInstallDirs)

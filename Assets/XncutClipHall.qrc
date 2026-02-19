@@ -1,0 +1,16 @@
+<!--
+ * @Author: xixi_
+ * @Date: 2026-02-19 16:32:36
+ * @LastEditors: xixi_
+ * @LastEditTime: 2026-02-19 16:33:09
+ * @FilePath: /Xncut/Assets/XncutClipHall.html
+ * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
+-->
+
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/">
+    <file>Images/ClipHall/StartIcon.png</file>
+    <file>Images/ClipHall/ClipHallInfoBg.png</file>
+  </qresource>
+</RCC>

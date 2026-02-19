@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2023/9/28 12:35:46
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-19 15:38:03
+ * @LastEditTime: 2026-02-19 16:21:36
  * @FilePath: /Xncut/Xncut/Xncut.cpp
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
  */
@@ -13,6 +13,7 @@
 #include <QLayout>
 #include <QStackedWidget>
 #include <QStatusBar>
+#include "XncutClipHall/XncutClipHallWidget.h"
 
 Xncut::Xncut(QWidget *Parent)
     : QMainWindow(Parent)
@@ -56,6 +57,9 @@ Xncut::Xncut(QWidget *Parent)
     M_ReturnClipHallAction->setIcon(QIcon(":/Images/Public/ReturnHall.png"));
     M_ReturnClipHallAction->setEnabled(false);
     M_ReturnClipHallAction->setStatusTip("返回大厅");
+
+    /* 中心堆栈部件 */
+    M_CentralStackedWidget->addWidget(new XncutClipHallWidget());
 
     /* 状态栏 */
     StatusBar->showMessage("作者真名: 姚妤熙", 1700);
