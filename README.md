@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-02-15 23:29:34
+ * @LastEditTime: 2026-03-06 21:51:21
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -54,7 +54,8 @@ git clone https://github.com/opennessgames/Xncut
 - 代码执行速度**快**
 - 代码质量**好**
 - 更**省**资源, 内存, 磁盘, CPU
-- **微信**和**QQ**就是反面教材
+- **微信**和**QQ**就是反面教材, 这里引用赵本山小品里的一段: 
+![一只公鸡要下蛋](Doc/Img/RoosterLayingEggs.png)
 
 # 代码规范
 > 首先，使用**Markdown编辑器**或者**具有Markdown功能**的编辑器把**规范**完整的打一边, 然后, 全部删除掉, 不能按下**Ctrl+Z**, 立即关闭你的编辑器, 彻底的删掉<br/>
