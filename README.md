@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2026-01-27 14:56:00
  * @LastEditors: xixi_
- * @LastEditTime: 2026-04-05 22:14:15
+ * @LastEditTime: 2026-05-02 16:40:56
  * @FilePath: /Xncut-Design/README.md
  * Copyright (c) 2020-2026 by xixi_ , All Rights Reserved.
 -->
@@ -30,5 +30,6 @@
   - [格式的支持](Md/6.FormatSupport.md)
   - [播放器的元素映射](Md/7.PlayerElementDoubleMap.md)
   - [傅里叶变换](Md/8.FourierTransform.md)
+  - [欧几里德距离](Md/9.EuclideanDistance.md)
 
 啊, 后续再更新吧, 新的一年啦, "码"到成功
