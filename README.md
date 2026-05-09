@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-05-09 12:53:27
+ * @LastEditTime: 2026-05-09 22:28:15
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -191,4 +191,4 @@ git clone https://github.com/opennessgames/Xncut
 > 如果成功了, 剪映VIP是啥? Pr订阅费用是啥? 我不知道
 
 # 越垃圾的地方, 规矩越多
-> 我不同意, 在工业领域, 绝对不行, <br/>苛刻规矩是为了守住生命线, 守住客户的信任,<br/> 如果规矩宽松, 就是拿生命开玩笑, <br/> 正所谓差之毫厘, 缪以千里; <br/> 是学校啊, 那太对了.
+> 我不同意, 在工业领域, 绝对不行, <br/>苛刻规矩是为了守住生命线, 守住客户的信任,<br/> 如果规矩宽松, 就是拿生命开玩笑, <br/> 正所谓差之毫厘, 缪以千里,<br/>测试场景必须覆盖全面, 少一个都不行<br/> 精度必须最高, 少一分都不行<br/>每一条规矩的背后都是血和泪的教训<br/> 是学校啊, 那太对了.
