@@ -2,7 +2,7 @@
  * @Author: xixi_
  * @Date: 2025-07-12 15:31:16
  * @LastEditors: xixi_
- * @LastEditTime: 2026-05-04 11:34:10
+ * @LastEditTime: 2026-05-09 12:53:27
  * @FilePath: /XncutUI/README.md
  * Copyright (c) 2020-2025 by xixi_ , All Rights Reserved.
 -->
@@ -189,3 +189,6 @@ git clone https://github.com/opennessgames/Xncut
 # 你不怕失败吗
 > 哈哈, 我当然怕, 让我尝试一下, 万一成功了呢?  <br/>
 > 如果成功了, 剪映VIP是啥? Pr订阅费用是啥? 我不知道
+
+# 越垃圾的地方, 规矩越多
+> 我不同意, 在工业领域, 绝对不行, <br/>苛刻规矩是为了守住生命线, 守住客户的信任,<br/> 如果规矩宽松, 就是拿生命开玩笑, <br/> 正所谓差之毫厘, 缪以千里; <br/> 是学校啊, 那太对了.
