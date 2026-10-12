@@ -1,6 +1,6 @@
 #
 # @Author: xixi_
-# @Date: 2024-07-09 01:42:04
+# @Date: 2024-04-24 19:26:03
 # @LastEditors: xixi_
 # @LastEditTime: 2026-02-05 23:47:41
 # @FilePath: /Xncut/CMakeLists.txt
@@ -8,45 +8,27 @@
 #
 
 cmake_minimum_required(VERSION 3.19)
-project(Xncut VERSION 0.0.1 DESCRIPTION "NEL剪辑软件" LANGUAGES CXX)
-
-# C/C++标准
-set(CMAKE_C_STANDARD 23)
-set(CMAKE_CXX_STANDARD 26)
-
-# error while loading shared libraries: libXncutCore.so: cannot open shared object file: No such file or directory
-set(CMAKE_BUILD_RPATH "$ORIGIN")
-
-# 编译模式
-set(CMAKE_BUILD_TYPE "Debug") # 调试(Debug); 发布(Release MinSizeRel)模式
-
-# 加大反编译力度
-
-# QT设定
-set(CMAKE_AUTOUIC OFF) # 禁止设计师
-set(CMAKE_AUTOMOC ON) # 启用MOC
-set(CMAKE_AUTORCC ON) # 启用RCC
+project(Xncut DESCRIPTION "熙柠剪辑宿主程序" LANGUAGES ASM C CXX)
 
 # 搜索QT包
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
+# QT设定
+set(CMAKE_AUTOUIC OFF) # 禁止设计师
+set(CMAKE_AUTOMOC ON) # 启用MOC
+set(CMAKE_AUTORCC OFF) # 禁止RCC
+
 qt_standard_project_setup()
 
-# 可执行文件: Xncut.ELF
-qt_add_executable(Xncut
-    WIN32 MACOSX_BUNDLE
-    ##########################
-    ##########################
-    Xncut.h
-    Xncut.cpp
-    ##########################
-    XncutMain.cpp
-)
+# 添加子模块
+add_subdirectory(XncutHost) # 宿主程序
+# Xncut.ELF
+qt_add_executable(Xncut WIN32 MACOSX_BUNDLE ${PUBG_XNCUT_SRCS})
 
+# 依赖
+set(PUBG_XNCUT_LIB ${PUBG_XNCUT_LIB} Qt::Core Qt::Widgets) # QT
 # 链接库
-target_link_libraries(Xncut PRIVATE Qt::Core Qt::Widgets) # QT
-
-include(GNUInstallDirs)
+target_link_libraries(Xncut PRIVATE ${PUBG_XNCUT_LIB})
 
 install(TARGETS Xncut
     BUNDLE DESTINATION .
