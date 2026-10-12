@@ -27,6 +27,7 @@ qt_add_executable(Xncut WIN32 MACOSX_BUNDLE ${PUBG_XNCUT_SRCS})
 
 # 依赖
 set(PUBG_XNCUT_LIB ${PUBG_XNCUT_LIB} Qt::Core Qt::Widgets) # QT
+set(PUBG_XNCUT_LIB ${PUBG_XNCUT_LIB} XncutAssets) # Xncut Internal APIs
 # 链接库
 target_link_libraries(Xncut PRIVATE ${PUBG_XNCUT_LIB})
 

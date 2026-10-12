@@ -1,0 +1,12 @@
+<!--
+ * @Author: xixi_
+ * @Date: 2026-01-31 14:10:27
+ * @LastEditors: xixi_
+ * @LastEditTime: 2026-06-03 17:49:28
+ * @FilePath: /Xncut/Assets/XncutIcon.qrc
+ * Copyright (c) 2017-2026 by xixi_ , All Rights Reserved.
+-->
+
+<RCC>
+    <qresource prefix="/"/>
+</RCC>
