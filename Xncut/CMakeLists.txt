@@ -21,9 +21,12 @@ set(CMAKE_AUTORCC OFF) # 禁止RCC
 qt_standard_project_setup()
 
 # 添加子模块
+add_subdirectory(XncutWelcome) # 欢迎页面
 add_subdirectory(XncutHost) # 宿主程序
 # Xncut.ELF
 qt_add_executable(Xncut WIN32 MACOSX_BUNDLE ${PUBG_XNCUT_SRCS})
+# 头文件
+target_include_directories(Xncut PRIVATE XncutWelcome)
 
 # 依赖
 set(PUBG_XNCUT_LIB ${PUBG_XNCUT_LIB} Qt::Core Qt::Widgets) # QT

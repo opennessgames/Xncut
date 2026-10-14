@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name = Xncut
+Comment = 万祯官方出品的视频编辑器
+Exec = /opt/openGAME/Xncut/Xncut --platform xcb %f
+GenericName=Xncut
+Terminal = false
+StartupNotify=false
+Type = Application
+X-Ubuntu-Touch = true
+Categories = AudioVideo
+Name[zh_CN] = openGAME熙柠剪辑
+Icon = /usr/share/icons/pubgxncut/pubgxncut128x128.png

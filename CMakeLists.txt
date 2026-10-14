@@ -37,8 +37,17 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PUBG_XNCUT_BINARY_DIR})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PUBG_XNCUT_BINARY_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${PUBG_XNCUT_BINARY_DIR})
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    # PS:只有在调试模式时, 这两个才算上
+    # 作战指挥中心
+    add_subdirectory(Src)
+endif()
+
 # 资源
 add_subdirectory(Assets)
+
+# 国际化
+add_subdirectory(I18n)
 
 # 主程序
 add_subdirectory(Xncut)
