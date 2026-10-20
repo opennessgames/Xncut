@@ -17,9 +17,10 @@ set(CMAKE_AUTOMOC OFF) # 禁用MOC
 set(CMAKE_AUTORCC OFF) # 禁用RCC
 
 set(LANGUAGES
-    zh_CN # 简体中文
-    ZH_TW # 繁体中文
-    EN # 英文
+    lzh     # 文言文(華夏)
+    zh_CN   # 简体中文
+    zh_TW   # 繁体中文
+    en      # 英文
 )
 
 list(TRANSFORM LANGUAGES PREPEND "Xncut_" OUTPUT_VARIABLE TS_FILES)

@@ -1,0 +1,34 @@
+#
+# @Author: xixi_
+# @Date: 2026-09-23 16:23:07
+# @LastEditors: xixi_
+# @LastEditTime: 2026-09-23 16:23:09
+# @FilePath: /Xncut/.github/workflows/ci.yml
+# Copyright (c) 2017-2026 by xixi_ , All Rights Reserved.
+#
+
+name: PUBGXNCUT-CI
+
+on:
+  push:
+    branches: [milkshake]
+
+# 这里我让AI写的.
+jobs:
+  include-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Forbid relative parent-dir includes
+        run: |
+          set -euo pipefail
+          # 匹配 #include "..." 中含 ../ 的写法
+          HITS=$(grep -rnE '^[[:space:]]*#[[:space:]]*include[[:space:]]*"[^"]*\.\./' \
+                 --include='*.h' --include='*.hpp' --include='*.cpp' --include='*.cc' . || true)
+          if [ -n "$HITS" ]; then
+            echo "::error::发现跨目录相对 include，请改用 target_include_directories + 短路径"
+            echo "$HITS"
+            exit 1
+          fi
+          echo "OK: 未发现 ../ 形式的 include"
