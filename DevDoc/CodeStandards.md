@@ -2,8 +2,8 @@
  * @Author: xixi_
  * @Date: 2026-10-03 16:54:41
  * @LastEditors: xixi_
- * @LastEditTime: 2026-10-12 16:22:13
- * @FilePath: /Xncut/DevDoc/CodeStandards.md
+ * @LastEditTime: 2026-11-15 15:13:08
+ * @FilePath: /PUBG_XNCUT/DevDoc/CodeStandards.md
  * Copyright (c) 2017-2026 by xixi_ , All Rights Reserved.
 -->
 
@@ -16,6 +16,18 @@
 1. [强制] 模块**不允许分散**, 强制**统一**并在**一个文件夹内**
 2. [强制] 禁止出现 **#include "../../"** 情况
 3. [强制] 禁止使用任何**递归**
+4. [强制] 禁止使用栈或者队列模拟递归，推荐使用迭代(PS：父指针回溯)
+5. [强制] 使用机翻（机器翻译）后进行核对, 参考**NounTranslation.md**
+6. [半限制] 在**冗余的迭代器类型或者超冗余类型**，**未知的变量类型**，可以使用auto，其余情况禁止，我不明白，int用auto是为什么？ “int三个字母，auto四个字母"
+    ```cpp
+    /* 最佳的应用场景1：匿名函数 */
+    auto createWidget = []()
+    {
+        QWidget *w = new QWidget();
+        w->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        return w;
+    };
+    ```
 
 # 本领域规范
 > 本领域属于**多媒体:NLE剪辑**
